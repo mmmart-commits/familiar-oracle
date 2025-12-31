@@ -189,13 +189,67 @@
                 <h2>ARCHIVE</h2>
                 
                 <div class="archive-controls">
-                    <input type="text" id="archive-search" placeholder="Search by matter, notes, or keywords...">
-                    <select id="archive-filter">
-                        <option value="all">All Sessions</option>
-                        <option value="tarot">Tarot Only</option>
-                        <option value="iching">I Ching Only</option>
-                    </select>
+                    <div class="filter-row">
+                        <input type="text" id="archive-search" placeholder="Search matter, observations, residue...">
+                    </div>
+                    
+                    <div class="filter-row">
+                        <select id="filter-familiar">
+                            <option value="">All Familiars</option>
+                            <option value="ARCHIVIST">ARCHIVIST</option>
+                            <option value="CARETAKER">CARETAKER</option>
+                            <option value="CARTOGRAPHER">CARTOGRAPHER</option>
+                            <option value="CUSTODIAN">CUSTODIAN</option>
+                            <option value="ENGINEER">ENGINEER</option>
+                            <option value="GHOST">GHOST</option>
+                            <option value="MIRROR">MIRROR</option>
+                            <option value="ORACLE">ORACLE</option>
+                            <option value="PILGRIM">PILGRIM</option>
+                            <option value="SEER">SEER</option>
+                            <option value="THERAPIST">THERAPIST</option>
+                            <option value="TRANSLATOR">TRANSLATOR</option>
+                            <option value="TRICKSTER">TRICKSTER</option>
+                        </select>
+                        
+                        <select id="filter-cycle">
+                            <option value="">All Cycles</option>
+                            <option value="I">CYCLE I</option>
+                            <option value="II">CYCLE II</option>
+                            <option value="III">CYCLE III</option>
+                            <option value="IV">CYCLE IV</option>
+                            <option value="V">CYCLE V</option>
+                            <option value="VI">CYCLE VI</option>
+                            <option value="VII">CYCLE VII</option>
+                            <option value="VIII">CYCLE VIII</option>
+                            <option value="IX">CYCLE IX</option>
+                            <option value="X">CYCLE X</option>
+                            <option value="XI">CYCLE XI</option>
+                            <option value="XII">CYCLE XII</option>
+                            <option value="XIII">CYCLE XIII</option>
+                            <option value="XIV">CYCLE XIV</option>
+                            <option value="XV">CYCLE XV</option>
+                            <option value="XVI">CYCLE XVI</option>
+                            <option value="XVII">CYCLE XVII</option>
+                            <option value="XVIII">CYCLE XVIII</option>
+                        </select>
+                        
+                        <select id="filter-polarity">
+                            <option value="">All Modes</option>
+                            <option value="STANDARD">STANDARD</option>
+                            <option value="ENTANGLED">ENTANGLED</option>
+                            <option value="RETROGRADE">RETROGRADE</option>
+                            <option value="REFLEXIVE">REFLEXIVE</option>
+                        </select>
+                    </div>
+                    
+                    <div class="filter-row">
+                        <input type="date" id="filter-date-from" placeholder="From date">
+                        <input type="date" id="filter-date-to" placeholder="To date">
+                        <button onclick="clearFilters()" class="btn-secondary">Clear Filters</button>
+                    </div>
                 </div>
+                
+                <div id="archive-stats" class="archive-stats"></div>
                 
                 <div id="archive-list" class="archive-list">
                     <!-- Archive entries will be inserted here -->
@@ -223,13 +277,12 @@
 
     <!-- Supabase -->
     <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
-
+    
     <!-- Scripts -->
     <script src="js/data.js"></script>
     <script src="js/tarot.js"></script>
     <script src="js/oracle.js"></script>
     <script src="js/app.js"></script>
     <script src="js/supabase.js"></script>
-
 </body>
 </html>
