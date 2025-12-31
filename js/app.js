@@ -441,10 +441,19 @@ function renderRitual() {
 
 function renderArchive() {
     const archiveList = document.getElementById('archive-list');
-    const sessions = [...AppState.sessions].reverse(); // Newest first
+    
+    // Apply filters
+    const filteredSessions = filterSessions();
+    const sessions = [...filteredSessions].reverse(); // Newest first
+    
+    // Update stats
+    updateArchiveStats(sessions.length, AppState.sessions.length);
     
     if (sessions.length === 0) {
-        archiveList.innerHTML = '<div class="archive-empty">No sessions yet. Begin a new session to start building your archive.</div>';
+        const message = AppState.sessions.length === 0 ? 
+            'No sessions yet. Begin a new session to start building your archive.' :
+            'No sessions match your filters.';
+        archiveList.innerHTML = `<div class="archive-empty">${message}</div>`;
         return;
     }
     
