@@ -17,9 +17,8 @@ const AppState = {
 // INITIALIZATION
 // ============================================
 
-document.addEventListener('DOMContentLoaded', async () => {
+document.addEventListener('DOMContentLoaded', () => {
     loadSessions();
-    await SupabaseSync.init(); // Initialize Supabase
     showView('view-welcome');
 });
 
@@ -229,9 +228,6 @@ function saveSession() {
     AppState.sessions.push(session);
     saveSessions();
     
-    // Save to Supabase if logged in
-    SupabaseSync.saveSession(session);
-    
     // Show confirmation
     alert('Session sealed ✶');
     
@@ -429,29 +425,152 @@ function renderArchive() {
     
     let html = '';
     
-    sessions.forEach(session => {
+    sessions.forEach((session, index) => {
         const date = new Date(session.timestamp).toISOString().split('T')[0];
         const time = new Date(session.timestamp).toISOString().split('T')[1].substring(0, 5);
         const vector = session.polarity ? `${session.polarity.poleA}→${session.polarity.poleB}` : '—';
         const mode = session.polarity ? session.polarity.polarity.substring(0, 3) : '—';
         const cycle = session.cycle || '—';
+        const familiar = session.familiar || '—';
         const firstLine = session.observations ? session.observations.split('\n')[0].substring(0, 60) + '...' : '';
         
         html += `
-            <div class="archive-entry">
-                <div class="archive-header">
+            <div class="archive-entry" id="session-${session.id}">
+                <div class="archive-header" onclick="toggleSession('${session.id}')">
                     <div class="archive-date">${date} / ${time}</div>
                     <div class="archive-matter">${session.matter}</div>
+                    <div class="archive-data">${familiar}</div>
                     <div class="archive-data">${vector}</div>
                     <div class="archive-data">${mode}</div>
                     <div class="archive-data">${cycle}</div>
                 </div>
-                <div class="archive-notes">${firstLine}</div>
+                <div class="archive-notes" onclick="toggleSession('${session.id}')">${firstLine}</div>
+                
+                <div class="archive-expanded" id="expanded-${session.id}" style="display: none;">
+                    ${renderExpandedSession(session)}
+                </div>
             </div>
         `;
     });
     
     archiveList.innerHTML = html;
+}
+
+function toggleSession(sessionId) {
+    const expanded = document.getElementById(`expanded-${sessionId}`);
+    const entry = document.getElementById(`session-${sessionId}`);
+    
+    if (expanded.style.display === 'none') {
+        // Close all other expanded sessions
+        document.querySelectorAll('.archive-expanded').forEach(el => {
+            el.style.display = 'none';
+        });
+        document.querySelectorAll('.archive-entry').forEach(el => {
+            el.classList.remove('expanded');
+        });
+        
+        // Open this one
+        expanded.style.display = 'block';
+        entry.classList.add('expanded');
+    } else {
+        // Close this one
+        expanded.style.display = 'none';
+        entry.classList.remove('expanded');
+    }
+}
+
+function renderExpandedSession(session) {
+    let html = '<div class="session-details">';
+    
+    // Metadata
+    html += '<div class="divider-light"></div>';
+    html += '<div class="detail-section">';
+    html += `<div class="detail-label">SESSION METADATA</div>`;
+    html += `<div class="detail-row"><span class="detail-key">Date:</span> ${new Date(session.timestamp).toLocaleString()}</div>`;
+    html += `<div class="detail-row"><span class="detail-key">Matter:</span> ${session.matter}</div>`;
+    if (session.coordinates) {
+        html += `<div class="detail-row"><span class="detail-key">Coordinates:</span> ${session.coordinates}</div>`;
+    }
+    html += `<div class="detail-row"><span class="detail-key">Method:</span> ${session.method === 'tarot' ? 'Tarot — Sulphuric Ignition' : 'I Ching — Mercurial Circulation'}</div>`;
+    html += '</div>';
+    
+    // Draw
+    if (session.draw && session.draw.length > 0) {
+        html += '<div class="divider-light"></div>';
+        html += '<div class="detail-section">';
+        html += `<div class="detail-label">THE DRAW</div>`;
+        html += '<div class="detail-cards">';
+        session.draw.forEach(card => {
+            const reversedLabel = card.reversed ? ' (R)' : '';
+            html += `<div class="detail-card">${card.position}. ${card.name_en}${reversedLabel}</div>`;
+        });
+        html += '</div>';
+        html += '</div>';
+    }
+    
+    // Transmutation
+    if (session.polarity) {
+        html += '<div class="divider-light"></div>';
+        html += '<div class="detail-section">';
+        html += `<div class="detail-label">TRANSMUTATION</div>`;
+        html += `<div class="detail-row"><span class="detail-key">Pole A:</span> ${session.polarity.poleA} (${session.polarity.weightA.toFixed(2)})</div>`;
+        html += `<div class="detail-row"><span class="detail-key">Pole B:</span> ${session.polarity.poleB} (${session.polarity.weightB.toFixed(2)})</div>`;
+        html += `<div class="detail-row"><span class="detail-key">Delta:</span> ${session.polarity.delta.toFixed(2)}</div>`;
+        html += `<div class="detail-row"><span class="detail-key">Polarity Mode:</span> ${session.polarity.polarity}</div>`;
+        html += '</div>';
+    }
+    
+    // Tonal Signature
+    if (session.tonalSignature) {
+        html += '<div class="divider-light"></div>';
+        html += '<div class="detail-section">';
+        html += `<div class="detail-label">TONAL SIGNATURE</div>`;
+        html += `<div class="detail-tonal">${session.tonalSignature.descriptor}</div>`;
+        html += `<div class="detail-text">${session.tonalSignature.gloss}</div>`;
+        html += '</div>';
+    }
+    
+    // Oracle Response
+    html += '<div class="divider-light"></div>';
+    html += '<div class="detail-section">';
+    html += `<div class="detail-label">ORACLE RESPONSE</div>`;
+    html += `<div class="detail-row"><span class="detail-key">Familiar:</span> ${session.familiar}</div>`;
+    html += `<div class="detail-row"><span class="detail-key">Cycle:</span> ${session.cycle}</div>`;
+    html += '</div>';
+    
+    // Ritual
+    if (session.ritual) {
+        html += '<div class="divider-light"></div>';
+        html += '<div class="detail-section">';
+        html += `<div class="detail-label">RITUAL</div>`;
+        html += `<div class="ritual-subsection"><span class="ritual-label">Function:</span> ${session.ritual.function}</div>`;
+        html += `<div class="ritual-subsection"><span class="ritual-label">Setup:</span> ${session.ritual.setup}</div>`;
+        html += `<div class="ritual-subsection"><span class="ritual-label">Action:</span> ${session.ritual.action}</div>`;
+        html += `<div class="ritual-subsection"><span class="ritual-label">Prompt:</span> ${session.ritual.prompt}</div>`;
+        html += `<div class="ritual-subsection"><span class="ritual-label">Note:</span> ${session.ritual.note}</div>`;
+        html += '</div>';
+    }
+    
+    // Observations
+    if (session.observations) {
+        html += '<div class="divider-light"></div>';
+        html += '<div class="detail-section">';
+        html += `<div class="detail-label">OBSERVATIONS</div>`;
+        html += `<div class="detail-text">${session.observations.replace(/\n/g, '<br>')}</div>`;
+        html += '</div>';
+    }
+    
+    // Residue
+    if (session.residue) {
+        html += '<div class="divider-light"></div>';
+        html += '<div class="detail-section">';
+        html += `<div class="detail-label">RESIDUE</div>`;
+        html += `<div class="detail-text">${session.residue.replace(/\n/g, '<br>')}</div>`;
+        html += '</div>';
+    }
+    
+    html += '</div>';
+    return html;
 }
 
 // ============================================
@@ -508,3 +627,7 @@ function generateId() {
         return v.toString(16);
     });
 }
+
+// Make functions globally accessible
+window.toggleSession = toggleSession;
+window.renderExpandedSession = renderExpandedSession;
