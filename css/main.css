@@ -10,14 +10,14 @@
     /* Colors */
     --color-bg: #ffffff;
     --color-text: #000000;
-    --color-grid: rgba(0, 0, 0, 0.08);
+    --color-grid: rgba(0, 0, 0, 0.12);
     --color-divider: #cccccc;
     --color-accent: #ff0000;
     --color-muted: #666666;
     --color-field-bg: #fafafa;
     
     /* Typography */
-    --font-sans: -apple-system, BlinkMacSystemFont, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    --font-sans: -apple-system, BlinkMacSystemFont, "Helvetica Neue", Helvetica, Inter, Roboto, Arial, sans-serif;
     --font-mono: "Courier New", Courier, monospace;
     
     --text-xs: 10px;
