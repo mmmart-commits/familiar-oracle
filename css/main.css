@@ -23,12 +23,12 @@
     --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, "Helvetica Neue", Helvetica, Arial, sans-serif;
     --font-mono: "Google Sans Code", Courier, monospace;
     
-    --text-xs: 10px;
-    --text-sm: 12px;
-    --text-base: 14px;
-    --text-lg: 18px;
-    --text-xl: 24px;
-    --text-2xl: 36px;
+    --text-xs: 11px;
+    --text-sm: 14px;
+    --text-base: 16px;
+    --text-lg: 21px;
+    --text-xl: 27px;
+    --text-2xl: 40px;
     
     /* Spacing (based on 8px grid) */
     --space-xs: 8px;
@@ -79,14 +79,14 @@ body {
 h1 {
     font-size: var(--text-2xl);
     font-weight: 700;
-    letter-spacing: -0.02em;
+    letter-spacing: -0.03em;
     text-transform: lowercase;
 }
 
 h2 {
     font-size: var(--text-xl);
     font-weight: 700;
-    letter-spacing: 0.05em;
+    letter-spacing: 0.0em;
     text-transform: lowercase;
     margin-bottom: var(--space-md);
 }
@@ -94,7 +94,7 @@ h2 {
 h3 {
     font-size: var(--text-lg);
     font-weight: 700;
-    letter-spacing: 0.03em;
+    letter-spacing: 0.0em;
     text-transform: lowercase;
     margin-bottom: var(--space-sm);
 }
