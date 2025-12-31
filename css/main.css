@@ -86,7 +86,7 @@ h1 {
 h2 {
     font-size: var(--text-xl);
     font-weight: 700;
-    letter-spacing: 0.0em;
+    letter-spacing: -0.03em;
     text-transform: lowercase;
     margin-bottom: var(--space-md);
 }
@@ -94,7 +94,7 @@ h2 {
 h3 {
     font-size: var(--text-lg);
     font-weight: 700;
-    letter-spacing: 0.0em;
+    letter-spacing: -0.03em;
     text-transform: lowercase;
     margin-bottom: var(--space-sm);
 }
@@ -107,7 +107,7 @@ p {
     font-size: var(--text-sm);
     color: var(--color-muted);
     text-transform: lowercase;
-    letter-spacing: 0.1em;
+    letter-spacing: 0.0em;
     margin-top: var(--space-xs);
 }
 
@@ -206,7 +206,7 @@ p {
     font-family: var(--font-sans);
     font-size: var(--text-base);
     font-weight: 700;
-    letter-spacing: 0.05em;
+    letter-spacing: 0.00em;
     text-transform: lowercase;
     padding: var(--space-md) var(--space-lg);
     background: var(--color-text);
@@ -238,7 +238,7 @@ p {
     display: block;
     font-size: var(--text-sm);
     font-weight: 700;
-    letter-spacing: 0.05em;
+    letter-spacing: 0.00em;
     text-transform: lowercase;
     margin-bottom: var(--space-xs);
 }
@@ -307,7 +307,7 @@ textarea {
 .heuristics-label {
     font-size: var(--text-xs);
     font-weight: 700;
-    letter-spacing: 0.05em;
+    letter-spacing: 0.00em;
     text-transform: lowercase;
     margin-bottom: var(--space-xs);
 }
@@ -422,7 +422,7 @@ textarea {
     font-weight: 700;
     text-transform: lowercase;
     text-align: center;
-    letter-spacing: 0.03em;
+    letter-spacing: 0.00em;
 }
 
 .card-image {
@@ -497,7 +497,7 @@ textarea {
 .tonal-label {
     font-size: var(--text-xs);
     font-weight: 700;
-    letter-spacing: 0.1em;
+    letter-spacing: 0.0em;
     text-transform: lowercase;
     color: var(--color-muted);
     margin-bottom: var(--space-sm);
@@ -601,7 +601,7 @@ textarea {
 .ritual-section-label {
     font-size: var(--text-xs);
     font-weight: 700;
-    letter-spacing: 0.1em;
+    letter-spacing: 0.0em;
     text-transform: lowercase;
     color: var(--color-muted);
     margin-bottom: var(--space-xs);
@@ -651,7 +651,7 @@ textarea {
     font-family: var(--font-sans);
     font-size: var(--text-sm);
     font-weight: 700;
-    letter-spacing: 0.05em;
+    letter-spacing: 0.00em;
     text-transform: lowercase;
     padding: var(--space-sm) var(--space-md);
     background: transparent;
@@ -676,7 +676,7 @@ textarea {
     font-size: var(--text-sm);
     color: var(--color-muted);
     text-transform: lowercase;
-    letter-spacing: 0.05em;
+    letter-spacing: 0.00em;
     font-weight: 700;
 }
 
@@ -758,7 +758,7 @@ textarea {
 .detail-label {
     font-size: var(--text-xs);
     font-weight: 700;
-    letter-spacing: 0.1em;
+    letter-spacing: 0.0em;
     text-transform: lowercase;
     color: var(--color-muted);
     margin-bottom: var(--space-sm);
@@ -827,7 +827,7 @@ textarea {
     font-family: var(--font-sans);
     font-size: var(--text-xs);
     font-weight: 700;
-    letter-spacing: 0.05em;
+    letter-spacing: 0.00em;
     text-transform: lowercase;
     padding: var(--space-sm) var(--space-md);
     background: transparent;
