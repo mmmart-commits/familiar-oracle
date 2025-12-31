@@ -17,8 +17,9 @@ const AppState = {
 // INITIALIZATION
 // ============================================
 
-document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener('DOMContentLoaded', async () => {
     loadSessions();
+    await SupabaseSync.init(); // Initialize Supabase
     showView('view-welcome');
 });
 
@@ -227,6 +228,9 @@ function saveSession() {
     // Save to sessions array
     AppState.sessions.push(session);
     saveSessions();
+    
+    // Save to Supabase if logged in
+    SupabaseSync.saveSession(session);
     
     // Show confirmation
     alert('Session sealed ✶');
