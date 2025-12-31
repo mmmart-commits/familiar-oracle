@@ -69,16 +69,15 @@ const SupabaseSync = {
     /**
      * Sign in with magic link (passwordless email)
      */
-    async signIn(email) {
-        await this.waitForSupabase();
-        
-        const { data, error } = await supabaseClient.auth.signInWithOtp({
-            email: email,
-            options: {
-                emailRedirectTo: window.location.origin
-            }
-        });
-        
+async signIn(email) {
+    await this.waitForSupabase();
+    
+    const { data, error } = await supabaseClient.auth.signInWithOtp({
+        email: email,
+        options: {
+            emailRedirectTo: 'https://mmmart-commits.github.io/familiar-oracle/'
+        }
+    });        
         if (error) {
             console.error('Sign in error:', error);
             return { success: false, error: error.message };
