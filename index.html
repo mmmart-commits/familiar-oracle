@@ -203,6 +203,11 @@
             </section>
         </main>
 
+        <!-- Auth Status -->
+        <div id="auth-status" style="text-align: center; padding: var(--space-md); border-top: 1px solid var(--color-divider);">
+            <button onclick="showSignIn()">Enable Cloud Sync</button>
+        </div>
+
         <!-- Navigation -->
         <nav class="main-nav">
             <button onclick="showView('view-welcome')">NEW SESSION</button>
@@ -215,6 +220,10 @@
             <p>The Familiar's Oracle — A divinatory instrument for attention</p>
         </footer>
     </div>
+
+    <!-- Supabase -->
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="js/supabase.js"></script>
 
     <!-- Scripts -->
     <script src="js/data.js"></script>
