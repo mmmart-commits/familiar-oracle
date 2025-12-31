@@ -460,8 +460,19 @@ function renderArchive() {
     let html = '';
     
     sessions.forEach((session, index) => {
-        const date = new Date(session.timestamp).toISOString().split('T')[0];
-        const time = new Date(session.timestamp).toISOString().split('T')[1].substring(0, 5);
+        // Format date/time in local timezone
+        const date = new Date(session.timestamp);
+        const dateStr = date.toLocaleDateString('en-US', { 
+            year: 'numeric', 
+            month: '2-digit', 
+            day: '2-digit' 
+        }).replace(/\//g, '-'); // Convert to YYYY-MM-DD format
+        const timeStr = date.toLocaleTimeString('en-US', { 
+            hour: '2-digit', 
+            minute: '2-digit',
+            hour12: false
+        });
+        
         const vector = session.polarity ? `${session.polarity.poleA}→${session.polarity.poleB}` : '—';
         const mode = session.polarity ? session.polarity.polarity.substring(0, 3) : '—';
         const cycle = session.cycle || '—';
@@ -471,7 +482,7 @@ function renderArchive() {
         html += `
             <div class="archive-entry" id="session-${session.id}">
                 <div class="archive-header" onclick="toggleSession('${session.id}')">
-                    <div class="archive-date">${date} / ${time}</div>
+                    <div class="archive-date">${dateStr} / ${timeStr}</div>
                     <div class="archive-matter">${session.matter}</div>
                     <div class="archive-data">${familiar}</div>
                     <div class="archive-data">${vector}</div>
