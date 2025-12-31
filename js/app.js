@@ -17,9 +17,31 @@ const AppState = {
 // INITIALIZATION
 // ============================================
 
-document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener('DOMContentLoaded', async () => {
     loadSessions();
+    await SupabaseSync.init(); // Initialize Supabase
     showView('view-welcome');
+    
+    // Add filter listeners
+    const filterIds = ['archive-search', 'filter-familiar', 'filter-cycle', 'filter-polarity', 'filter-date-from', 'filter-date-to'];
+    filterIds.forEach(id => {
+        const el = document.getElementById(id);
+        if (el) {
+            if (el.type === 'text' || el.type === 'search') {
+                el.addEventListener('input', () => {
+                    if (AppState.currentView === 'view-archive') {
+                        renderArchive();
+                    }
+                });
+            } else {
+                el.addEventListener('change', () => {
+                    if (AppState.currentView === 'view-archive') {
+                        renderArchive();
+                    }
+                });
+            }
+        }
+    });
 });
 
 // ============================================
@@ -456,6 +478,98 @@ function renderArchive() {
     archiveList.innerHTML = html;
 }
 
+function filterSessions() {
+    const searchTerm = document.getElementById('archive-search')?.value.toLowerCase() || '';
+    const familiarFilter = document.getElementById('filter-familiar')?.value || '';
+    const cycleFilter = document.getElementById('filter-cycle')?.value || '';
+    const polarityFilter = document.getElementById('filter-polarity')?.value || '';
+    const dateFrom = document.getElementById('filter-date-from')?.value || '';
+    const dateTo = document.getElementById('filter-date-to')?.value || '';
+    
+    return AppState.sessions.filter(session => {
+        // Search filter
+        if (searchTerm) {
+            const searchableText = [
+                session.matter,
+                session.observations,
+                session.residue,
+                session.coordinates
+            ].join(' ').toLowerCase();
+            
+            if (!searchableText.includes(searchTerm)) {
+                return false;
+            }
+        }
+        
+        // Familiar filter
+        if (familiarFilter && session.familiar !== familiarFilter) {
+            return false;
+        }
+        
+        // Cycle filter
+        if (cycleFilter && session.cycle !== cycleFilter) {
+            return false;
+        }
+        
+        // Polarity filter
+        if (polarityFilter && session.polarity?.polarity !== polarityFilter) {
+            return false;
+        }
+        
+        // Date range filter
+        const sessionDate = new Date(session.timestamp).toISOString().split('T')[0];
+        
+        if (dateFrom && sessionDate < dateFrom) {
+            return false;
+        }
+        
+        if (dateTo && sessionDate > dateTo) {
+            return false;
+        }
+        
+        return true;
+    });
+}
+
+function updateArchiveStats(showing, total) {
+    const statsEl = document.getElementById('archive-stats');
+    if (!statsEl) return;
+    
+    if (showing === total) {
+        statsEl.innerHTML = `<p class="stats-text">Showing all ${total} session${total !== 1 ? 's' : ''}</p>`;
+    } else {
+        statsEl.innerHTML = `<p class="stats-text">Showing ${showing} of ${total} session${total !== 1 ? 's' : ''}</p>`;
+    }
+}
+
+function clearFilters() {
+    document.getElementById('archive-search').value = '';
+    document.getElementById('filter-familiar').value = '';
+    document.getElementById('filter-cycle').value = '';
+    document.getElementById('filter-polarity').value = '';
+    document.getElementById('filter-date-from').value = '';
+    document.getElementById('filter-date-to').value = '';
+    renderArchive();
+}
+
+function deleteSession(sessionId) {
+    if (!confirm('Delete this session? This cannot be undone.')) {
+        return;
+    }
+    
+    // Remove from AppState
+    AppState.sessions = AppState.sessions.filter(s => s.id !== sessionId);
+    
+    // Save to localStorage
+    saveSessions();
+    
+    // Delete from Supabase if logged in
+    SupabaseSync.deleteSession(sessionId);
+    
+    // Re-render archive
+    renderArchive();
+}
+
 function toggleSession(sessionId) {
     const expanded = document.getElementById(`expanded-${sessionId}`);
     const entry = document.getElementById(`session-${sessionId}`);
@@ -570,6 +684,14 @@ function renderExpandedSession(session) {
     }
     
     html += '</div>';
+    
+    // Delete button
+    html += '<div class="divider-light"></div>';
+    html += `<div class="session-actions">
+        <button class="btn-delete" onclick="deleteSession('${session.id}')">DELETE SESSION</button>
+    </div>`;
+    
+    html += '</div>';
     return html;
 }
 
@@ -631,3 +753,5 @@ function generateId() {
 // Make functions globally accessible
 window.toggleSession = toggleSession;
 window.renderExpandedSession = renderExpandedSession;
+window.deleteSession = deleteSession;
+window.clearFilters = clearFilters;
