@@ -124,7 +124,7 @@ function proceedToDraw() {
     const coordinates = document.getElementById('coordinates').value.trim();
     
     if (!matter) {
-        alert('Please describe what the matter is today.');
+        alert('please describe what the matter is today.');
         return;
     }
     
@@ -269,8 +269,8 @@ function renderDrawButton() {
     const drawDisplay = document.getElementById('draw-display');
     drawDisplay.innerHTML = `
         <p class="field-help" style="text-align: center; margin: var(--space-lg) 0;">
-            Press the button below to draw seven cards from the Tarot de Marseille.
-            <br>Each card will map to one alchemical operation.
+            press the button below to draw seven cards from the tarot de marseille.
+            <br>each card will map to one alchemical operation.
         </p>
     `;
 }
@@ -296,7 +296,7 @@ function renderCardBacks(cards) {
     });
     
     html += '</div>';
-    html += '<p class="field-help" style="text-align: center; margin-top: var(--space-md);">Click each card to reveal</p>';
+    html += '<p class="field-help" style="text-align: center; margin-top: var(--space-md);">click each card to reveal</p>';
     
     drawDisplay.innerHTML = html;
 }
@@ -451,8 +451,8 @@ function renderArchive() {
     
     if (sessions.length === 0) {
         const message = AppState.sessions.length === 0 ? 
-            'No sessions yet. Begin a new session to start building your archive.' :
-            'No sessions match your filters.';
+            'no sessions yet. begin a new session to start building your archive.' :
+            'no sessions match your filters.';
         archiveList.innerHTML = `<div class="archive-empty">${message}</div>`;
         return;
     }
@@ -561,9 +561,9 @@ function updateArchiveStats(showing, total) {
     if (!statsEl) return;
     
     if (showing === total) {
-        statsEl.innerHTML = `<p class="stats-text">Showing all ${total} session${total !== 1 ? 's' : ''}</p>`;
+        statsEl.innerHTML = `<p class="stats-text">showing all ${total} session${total !== 1 ? 's' : ''}</p>`;
     } else {
-        statsEl.innerHTML = `<p class="stats-text">Showing ${showing} of ${total} session${total !== 1 ? 's' : ''}</p>`;
+        statsEl.innerHTML = `<p class="stats-text">showing ${showing} of ${total} session${total !== 1 ? 's' : ''}</p>`;
     }
 }
 
@@ -578,7 +578,7 @@ function clearFilters() {
 }
 
 function deleteSession(sessionId) {
-    if (!confirm('Delete this session? This cannot be undone.')) {
+    if (!confirm('delete this session? this cannot be undone...')) {
         return;
     }
     
@@ -755,7 +755,7 @@ function saveSessions() {
         localStorage.setItem('oracle_sessions', JSON.stringify(AppState.sessions));
     } catch (e) {
         console.error('Error saving sessions:', e);
-        alert('Error saving session. Your browser storage may be full.');
+        alert('error saving session. your browser storage may be full.');
     }
 }
 
