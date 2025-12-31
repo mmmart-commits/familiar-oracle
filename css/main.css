@@ -709,7 +709,6 @@ textarea {
 }
 
 .archive-date {
-    font-family: var(--font-mono);
     font-weight: 700;
 }
 
@@ -718,7 +717,6 @@ textarea {
 }
 
 .archive-data {
-    font-family: var(--font-mono);
     font-size: var(--text-xs);
     color: var(--color-muted);
 }
@@ -767,7 +765,6 @@ textarea {
 
 .detail-key {
     font-weight: 700;
-    font-family: var(--font-mono);
     font-size: var(--text-xs);
     text-transform: uppercase;
     color: var(--color-muted);
@@ -793,7 +790,6 @@ textarea {
 }
 
 .detail-card {
-    font-family: var(--font-mono);
     font-size: var(--text-sm);
     padding: var(--space-xs);
     background: var(--color-bg);
@@ -808,7 +804,6 @@ textarea {
 
 .ritual-label {
     font-weight: 700;
-    font-family: var(--font-mono);
     font-size: var(--text-xs);
     text-transform: uppercase;
     color: var(--color-muted);
