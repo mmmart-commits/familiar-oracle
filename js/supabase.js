@@ -4,11 +4,11 @@
  */
 
 // Replace these with your actual values
-const SUPABASE_URL = 'https://qrgibphjzvpkaojyaiei.supabase.co';
+const SUPABASE_URL = 'https://qrgibphjzvpkaojyaiei.supabaseClient.co';
 const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InFyZ2licGhqenZwa2FvanlhaWVpIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjcxNTE4NDcsImV4cCI6MjA4MjcyNzg0N30.fSk73B0GIoYBXJkZ6mmBOgIBkq-p-3bNkrEuLzMQTlQ';
 
 // Initialize Supabase client
-const supabase = window.supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
+const supabaseClient = window.supabaseClient.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
 
 const SupabaseSync = {
     currentUser: null,
@@ -17,7 +17,7 @@ const SupabaseSync = {
      * Initialize - check if user is logged in
      */
     async init() {
-        const { data: { session } } = await supabase.auth.getSession();
+        const { data: { session } } = await supabaseClient.auth.getSession();
         if (session) {
             this.currentUser = session.user;
             console.log('User logged in:', this.currentUser.id);
@@ -29,7 +29,7 @@ const SupabaseSync = {
      * Sign in with magic link (passwordless email)
      */
     async signIn(email) {
-        const { data, error } = await supabase.auth.signInWithOtp({
+        const { data, error } = await supabaseClient.auth.signInWithOtp({
             email: email,
             options: {
                 emailRedirectTo: window.location.origin
@@ -48,7 +48,7 @@ const SupabaseSync = {
      * Sign out
      */
     async signOut() {
-        const { error } = await supabase.auth.signOut();
+        const { error } = await supabaseClient.auth.signOut();
         if (error) {
             console.error('Sign out error:', error);
         }
@@ -146,7 +146,7 @@ const SupabaseSync = {
 };
 
 // Listen for auth state changes
-supabase.auth.onAuthStateChange((event, session) => {
+supabaseClient.auth.onAuthStateChange((event, session) => {
     if (event === 'SIGNED_IN') {
         SupabaseSync.currentUser = session.user;
         SupabaseSync.syncSessions();
@@ -181,3 +181,9 @@ function showSignIn() {
         });
     }
 }
+
+// Make functions globally accessible
+window.SupabaseSync = SupabaseSync;
+window.showSignIn = showSignIn;
+window.updateAuthUI = updateAuthUI;
+
