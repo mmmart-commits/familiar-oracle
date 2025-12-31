@@ -4,12 +4,21 @@
  */
 
 // Replace these with your actual values
-const SUPABASE_URL = 'https://qrgibphjzvpkaojyaiei.supabaseClient.co';
-const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InFyZ2licGhqenZwa2FvanlhaWVpIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjcxNTE4NDcsImV4cCI6MjA4MjcyNzg0N30.fSk73B0GIoYBXJkZ6mmBOgIBkq-p-3bNkrEuLzMQTlQ';
+const SUPABASE_URL = 'YOUR_PROJECT_URL_HERE';
+const SUPABASE_ANON_KEY = 'YOUR_ANON_KEY_HERE';
 
-// Initialize Supabase client
-const supabaseClient = window.supabaseClient.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
+// Initialize Supabase client (wait for library to load)
+let supabaseClient;
 
+// Wait for Supabase library to load
+(function initSupabase() {
+    if (typeof window.supabase !== 'undefined') {
+        supabaseClient = window.supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
+        console.log('Supabase initialized');
+    } else {
+        setTimeout(initSupabase, 100); // Check again in 100ms
+    }
+})();
 const SupabaseSync = {
     currentUser: null,
     
