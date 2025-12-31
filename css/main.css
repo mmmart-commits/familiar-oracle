@@ -108,6 +108,13 @@ p {
     margin-top: var(--space-xs);
 }
 
+.version {
+    font-family: var(--font-mono);
+    font-size: var(--text-xs);
+    color: var(--color-divider);
+    margin-left: var(--space-sm);
+}
+
 .optional {
     font-size: var(--text-xs);
     color: var(--color-muted);
