@@ -706,6 +706,7 @@ textarea {
     grid-template-columns: 120px 1fr 120px 100px 100px 80px;
     gap: var(--space-sm);
     font-size: var(--text-sm);
+    align-items: start; /* Allow rows to wrap without centering */
 }
 
 .archive-date {
@@ -719,6 +720,9 @@ textarea {
 .archive-data {
     font-size: var(--text-xs);
     color: var(--color-muted);
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    hyphens: auto;
 }
 
 .archive-notes {
