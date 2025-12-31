@@ -21,25 +21,6 @@ document.addEventListener('DOMContentLoaded', async () => {
     loadSessions();
     await SupabaseSync.init(); // Initialize Supabase
     showView('view-welcome');
-    
-    // Add filter listeners
-    const filterIds = ['archive-search', 'filter-familiar', 'filter-cycle', 'filter-polarity', 'filter-date-from', 'filter-date-to'];
-    filterIds.forEach(id => {
-        const el = document.getElementById(id);
-        if (el) {
-            // Add both input and change listeners to catch all interactions
-            el.addEventListener('input', () => {
-                if (AppState.currentView === 'view-archive') {
-                    renderArchive();
-                }
-            });
-            el.addEventListener('change', () => {
-                if (AppState.currentView === 'view-archive') {
-                    renderArchive();
-                }
-            });
-        }
-    });
 });
 
 // ============================================
@@ -62,12 +43,36 @@ function showView(viewId) {
     // Special handling for archive view
     if (viewId === 'view-archive') {
         renderArchive();
+        attachFilterListeners(); // Attach listeners when archive is shown
     }
     
     // Reset draw view when returning to welcome
     if (viewId === 'view-welcome') {
         resetDrawView();
     }
+}
+
+function attachFilterListeners() {
+    const filterIds = ['archive-search', 'filter-familiar', 'filter-cycle', 'filter-polarity', 'filter-date-from', 'filter-date-to'];
+    
+    filterIds.forEach(id => {
+        const el = document.getElementById(id);
+        if (el) {
+            // Remove old listeners to avoid duplicates
+            el.replaceWith(el.cloneNode(true));
+            const newEl = document.getElementById(id);
+            
+            // Add both input and change listeners
+            newEl.addEventListener('input', () => {
+                console.log('Filter changed:', id);
+                renderArchive();
+            });
+            newEl.addEventListener('change', () => {
+                console.log('Filter changed:', id);
+                renderArchive();
+            });
+        }
+    });
 }
 
 function resetDrawView() {
