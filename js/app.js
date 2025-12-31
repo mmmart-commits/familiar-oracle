@@ -473,7 +473,7 @@ function renderArchive() {
             hour12: false
         });
         
-        const vector = session.polarity ? `${session.polarity.poleA}→${session.polarity.poleB}` : '—';
+        const vector = session.polarity ? `${session.polarity.poleA} → ${session.polarity.poleB}` : '—';
         const mode = session.polarity ? session.polarity.polarity.substring(0, 3) : '—';
         const cycle = session.cycle || '—';
         const familiar = session.familiar || '—';
