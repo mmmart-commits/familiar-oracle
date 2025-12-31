@@ -1,0 +1,711 @@
+/* ============================================
+   THE FAMILIAR'S ORACLE — SWISS GRID AESTHETIC
+   Helvetica, rational typography, dot grid
+   ============================================ */
+
+/* ============================================
+   ROOT VARIABLES
+   ============================================ */
+:root {
+    /* Colors */
+    --color-bg: #ffffff;
+    --color-text: #000000;
+    --color-grid: rgba(0, 0, 0, 0.03);
+    --color-divider: #cccccc;
+    --color-accent: #ff0000;
+    --color-muted: #666666;
+    --color-field-bg: #fafafa;
+    
+    /* Typography */
+    --font-sans: -apple-system, BlinkMacSystemFont, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    --font-mono: "Courier New", Courier, monospace;
+    
+    --text-xs: 10px;
+    --text-sm: 12px;
+    --text-base: 14px;
+    --text-lg: 18px;
+    --text-xl: 24px;
+    --text-2xl: 36px;
+    
+    /* Spacing (based on 8px grid) */
+    --space-xs: 8px;
+    --space-sm: 16px;
+    --space-md: 24px;
+    --space-lg: 32px;
+    --space-xl: 48px;
+    --space-2xl: 64px;
+    
+    /* Layout */
+    --max-width: 1200px;
+    --card-ratio: 0.58; /* Tarot card aspect ratio */
+}
+
+/* ============================================
+   RESET & BASE
+   ============================================ */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-sans);
+    font-size: var(--text-base);
+    line-height: 1.5;
+    color: var(--color-text);
+    background-color: var(--color-bg);
+    background-image: radial-gradient(circle, var(--color-grid) 1px, transparent 1px);
+    background-size: 20px 20px;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* ============================================
+   LAYOUT
+   ============================================ */
+.container {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: var(--space-xl) var(--space-md);
+}
+
+/* ============================================
+   TYPOGRAPHY
+   ============================================ */
+h1 {
+    font-size: var(--text-2xl);
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    text-transform: uppercase;
+}
+
+h2 {
+    font-size: var(--text-xl);
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    margin-bottom: var(--space-md);
+}
+
+h3 {
+    font-size: var(--text-lg);
+    font-weight: 700;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    margin-bottom: var(--space-sm);
+}
+
+p {
+    margin-bottom: var(--space-sm);
+}
+
+.subtitle {
+    font-size: var(--text-sm);
+    color: var(--color-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin-top: var(--space-xs);
+}
+
+.optional {
+    font-size: var(--text-xs);
+    color: var(--color-muted);
+    text-transform: lowercase;
+}
+
+/* ============================================
+   HEADER & FOOTER
+   ============================================ */
+.site-header {
+    text-align: center;
+    margin-bottom: var(--space-2xl);
+    padding-bottom: var(--space-lg);
+    border-bottom: 1px solid var(--color-divider);
+}
+
+.site-footer {
+    margin-top: var(--space-2xl);
+    padding-top: var(--space-lg);
+    border-top: 1px solid var(--color-divider);
+    text-align: center;
+    font-size: var(--text-sm);
+    color: var(--color-muted);
+}
+
+/* ============================================
+   NAVIGATION
+   ============================================ */
+.main-nav {
+    display: flex;
+    gap: var(--space-sm);
+    justify-content: center;
+    margin-top: var(--space-xl);
+    padding-top: var(--space-lg);
+    border-top: 1px solid var(--color-divider);
+}
+
+.main-nav button {
+    font-family: var(--font-sans);
+    font-size: var(--text-sm);
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    padding: var(--space-sm) var(--space-md);
+    background: transparent;
+    border: 1px solid var(--color-text);
+    color: var(--color-text);
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.main-nav button:hover {
+    background: var(--color-text);
+    color: var(--color-bg);
+}
+
+/* ============================================
+   DIVIDERS
+   ============================================ */
+.divider-top {
+    border-top: 1px solid var(--color-divider);
+    margin-bottom: var(--space-lg);
+    padding-top: var(--space-lg);
+}
+
+.divider-light {
+    border-top: 1px solid var(--color-divider);
+    margin: var(--space-lg) 0;
+}
+
+/* ============================================
+   VIEW SYSTEM
+   ============================================ */
+.view {
+    display: none;
+}
+
+.view.active {
+    display: block;
+}
+
+/* ============================================
+   BUTTONS
+   ============================================ */
+.btn-primary {
+    font-family: var(--font-sans);
+    font-size: var(--text-base);
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    padding: var(--space-md) var(--space-lg);
+    background: var(--color-text);
+    color: var(--color-bg);
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    margin-top: var(--space-md);
+    transition: all 0.2s;
+}
+
+.btn-primary:hover {
+    background: var(--color-accent);
+}
+
+.btn-primary:disabled {
+    background: var(--color-muted);
+    cursor: not-allowed;
+}
+
+/* ============================================
+   FORMS
+   ============================================ */
+.form-group {
+    margin-bottom: var(--space-lg);
+}
+
+.form-group label {
+    display: block;
+    font-size: var(--text-sm);
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    margin-bottom: var(--space-xs);
+}
+
+.field-help {
+    font-size: var(--text-xs);
+    color: var(--color-muted);
+    margin-bottom: var(--space-xs);
+}
+
+input[type="text"],
+textarea {
+    font-family: var(--font-sans);
+    font-size: var(--text-base);
+    width: 100%;
+    padding: var(--space-sm);
+    border: 1px solid var(--color-divider);
+    background: var(--color-field-bg);
+    color: var(--color-text);
+}
+
+input[type="text"]:focus,
+textarea:focus {
+    outline: none;
+    border-color: var(--color-text);
+}
+
+textarea {
+    resize: vertical;
+    line-height: 1.6;
+}
+
+/* ============================================
+   METHOD SELECTION
+   ============================================ */
+.method-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: var(--space-lg);
+    margin-top: var(--space-lg);
+}
+
+.method-card {
+    padding: var(--space-lg);
+    border: 1px solid var(--color-divider);
+}
+
+.method-symbol {
+    font-size: 48px;
+    text-align: center;
+    margin-bottom: var(--space-md);
+}
+
+.method-desc {
+    font-size: var(--text-sm);
+    line-height: 1.6;
+    margin-bottom: var(--space-md);
+}
+
+.heuristics {
+    background: var(--color-field-bg);
+    padding: var(--space-md);
+    margin: var(--space-md) 0;
+}
+
+.heuristics-label {
+    font-size: var(--text-xs);
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    margin-bottom: var(--space-xs);
+}
+
+.heuristics ul {
+    list-style: none;
+    font-size: var(--text-sm);
+}
+
+.heuristics li {
+    padding-left: var(--space-sm);
+    position: relative;
+    margin-bottom: var(--space-xs);
+}
+
+.heuristics li:before {
+    content: "—";
+    position: absolute;
+    left: 0;
+}
+
+/* ============================================
+   TAROT CARDS
+   ============================================ */
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: var(--space-sm);
+    margin: var(--space-lg) 0;
+}
+
+.tarot-card {
+    aspect-ratio: 0.58;
+    border: 1px solid var(--color-divider);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: var(--space-sm);
+    background: var(--color-field-bg);
+    position: relative;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.tarot-card.reversed {
+    transform: rotate(180deg);
+}
+
+.tarot-card.card-back {
+    background: var(--color-text);
+    color: var(--color-bg);
+    border-color: var(--color-text);
+}
+
+.tarot-card.card-back:hover {
+    background: var(--color-muted);
+    border-color: var(--color-muted);
+}
+
+.tarot-card.flipped {
+    background: var(--color-field-bg);
+    color: var(--color-text);
+    border-color: var(--color-divider);
+    cursor: default;
+    animation: flipCard 0.3s ease;
+}
+
+@keyframes flipCard {
+    0% { transform: scaleX(1); }
+    50% { transform: scaleX(0); }
+    100% { transform: scaleX(1); }
+}
+
+.tarot-card.flipped.reversed {
+    animation: flipCardReversed 0.3s ease;
+}
+
+@keyframes flipCardReversed {
+    0% { transform: rotate(180deg) scaleX(1); }
+    50% { transform: rotate(180deg) scaleX(0); }
+    100% { transform: rotate(180deg) scaleX(1); }
+}
+
+.card-back-design {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+}
+
+.card-back-symbol {
+    font-size: 48px;
+    margin-top: var(--space-sm);
+}
+
+.card-number {
+    font-family: var(--font-mono);
+    font-size: var(--text-xs);
+    color: var(--color-muted);
+    margin-bottom: var(--space-xs);
+}
+
+.tarot-card.card-back .card-number {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.card-name {
+    font-size: var(--text-sm);
+    font-weight: 700;
+    text-transform: uppercase;
+    text-align: center;
+    letter-spacing: 0.03em;
+}
+
+.card-image {
+    width: 100%;
+    height: auto;
+}
+
+/* ============================================
+   HEAT MAP
+   ============================================ */
+.heat-map {
+    margin: var(--space-lg) 0;
+}
+
+.heat-row {
+    display: grid;
+    grid-template-columns: 140px 60px 1fr;
+    gap: var(--space-sm);
+    align-items: center;
+    padding: var(--space-xs) 0;
+    font-family: var(--font-mono);
+    font-size: var(--text-sm);
+}
+
+.heat-label {
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+.heat-value {
+    text-align: right;
+}
+
+.heat-bar {
+    height: 4px;
+    background: var(--color-text);
+    transition: width 0.3s;
+}
+
+/* ============================================
+   POLARITY DISPLAY
+   ============================================ */
+.polarity-box {
+    background: var(--color-field-bg);
+    padding: var(--space-md);
+    margin: var(--space-lg) 0;
+    font-family: var(--font-mono);
+    font-size: var(--text-sm);
+}
+
+.polarity-mode {
+    font-weight: 700;
+    font-size: var(--text-lg);
+    margin-bottom: var(--space-sm);
+}
+
+.polarity-delta,
+.polarity-vector {
+    margin: var(--space-xs) 0;
+}
+
+/* ============================================
+   TONAL SIGNATURE
+   ============================================ */
+.tonal-signature {
+    background: var(--color-field-bg);
+    padding: var(--space-lg);
+    margin-bottom: var(--space-lg);
+    text-align: center;
+}
+
+.tonal-label {
+    font-size: var(--text-xs);
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--color-muted);
+    margin-bottom: var(--space-sm);
+}
+
+.tonal-descriptor {
+    font-size: var(--text-xl);
+    font-weight: 700;
+    margin-bottom: var(--space-sm);
+}
+
+.tonal-gloss {
+    font-size: var(--text-sm);
+    margin-bottom: var(--space-md);
+}
+
+.tonal-meta {
+    font-size: var(--text-sm);
+    font-style: italic;
+    color: var(--color-muted);
+}
+
+/* ============================================
+   FAMILIAR & CYCLE
+   ============================================ */
+#familiar-announcement {
+    text-align: center;
+    margin: var(--space-lg) 0;
+}
+
+.polarity-trigger {
+    text-align: center;
+    font-size: var(--text-sm);
+    color: var(--color-muted);
+    margin-bottom: var(--space-lg);
+}
+
+.cycle-grid {
+    display: grid;
+    gap: var(--space-md);
+    margin: var(--space-lg) 0;
+}
+
+.cycle-option {
+    border: 1px solid var(--color-divider);
+    padding: var(--space-md);
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.cycle-option:hover {
+    border-color: var(--color-text);
+    background: var(--color-field-bg);
+}
+
+.cycle-option.selected {
+    border-color: var(--color-text);
+    background: var(--color-text);
+    color: var(--color-bg);
+}
+
+.cycle-title {
+    font-weight: 700;
+    margin-bottom: var(--space-xs);
+}
+
+.cycle-desc {
+    font-size: var(--text-sm);
+    margin-bottom: var(--space-sm);
+}
+
+.cycle-reason {
+    font-size: var(--text-xs);
+    color: var(--color-muted);
+}
+
+.cycle-option.selected .cycle-reason {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+/* ============================================
+   RITUAL DISPLAY
+   ============================================ */
+#ritual-header {
+    font-size: var(--text-xl);
+    font-weight: 700;
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: var(--space-lg);
+}
+
+.ritual-content {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.ritual-section {
+    margin-bottom: var(--space-lg);
+}
+
+.ritual-section-label {
+    font-size: var(--text-xs);
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--color-muted);
+    margin-bottom: var(--space-xs);
+}
+
+.ritual-section-content {
+    font-size: var(--text-base);
+    line-height: 1.8;
+}
+
+/* ============================================
+   ARCHIVE
+   ============================================ */
+.archive-controls {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: var(--space-sm);
+    margin-bottom: var(--space-lg);
+}
+
+#archive-search {
+    width: 100%;
+}
+
+#archive-filter {
+    font-family: var(--font-sans);
+    font-size: var(--text-sm);
+    padding: var(--space-sm);
+    border: 1px solid var(--color-divider);
+    background: var(--color-field-bg);
+}
+
+.archive-list {
+    border-top: 1px solid var(--color-divider);
+}
+
+.archive-entry {
+    border-bottom: 1px solid var(--color-divider);
+    padding: var(--space-md) 0;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.archive-entry:hover {
+    background: var(--color-field-bg);
+}
+
+.archive-header {
+    display: grid;
+    grid-template-columns: 120px 1fr 100px 100px 80px;
+    gap: var(--space-sm);
+    font-size: var(--text-sm);
+    margin-bottom: var(--space-xs);
+}
+
+.archive-date {
+    font-family: var(--font-mono);
+    font-weight: 700;
+}
+
+.archive-matter {
+    font-weight: 700;
+}
+
+.archive-data {
+    font-family: var(--font-mono);
+    font-size: var(--text-xs);
+    color: var(--color-muted);
+}
+
+.archive-notes {
+    font-size: var(--text-sm);
+    color: var(--color-muted);
+    margin-top: var(--space-xs);
+}
+
+.archive-empty {
+    padding: var(--space-xl);
+    text-align: center;
+    color: var(--color-muted);
+}
+
+/* ============================================
+   RESPONSIVE
+   ============================================ */
+@media (max-width: 768px) {
+    .container {
+        padding: var(--space-md) var(--space-sm);
+    }
+    
+    .method-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .card-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    
+    .archive-header {
+        grid-template-columns: 1fr;
+        gap: var(--space-xs);
+    }
+    
+    h1 {
+        font-size: var(--text-xl);
+    }
+    
+    h2 {
+        font-size: var(--text-lg);
+    }
+}
+
+@media (max-width: 480px) {
+    .card-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
