@@ -27,19 +27,17 @@ document.addEventListener('DOMContentLoaded', async () => {
     filterIds.forEach(id => {
         const el = document.getElementById(id);
         if (el) {
-            if (el.type === 'text' || el.type === 'search') {
-                el.addEventListener('input', () => {
-                    if (AppState.currentView === 'view-archive') {
-                        renderArchive();
-                    }
-                });
-            } else {
-                el.addEventListener('change', () => {
-                    if (AppState.currentView === 'view-archive') {
-                        renderArchive();
-                    }
-                });
-            }
+            // Add both input and change listeners to catch all interactions
+            el.addEventListener('input', () => {
+                if (AppState.currentView === 'view-archive') {
+                    renderArchive();
+                }
+            });
+            el.addEventListener('change', () => {
+                if (AppState.currentView === 'view-archive') {
+                    renderArchive();
+                }
+            });
         }
     });
 });
@@ -486,6 +484,8 @@ function filterSessions() {
     const dateFrom = document.getElementById('filter-date-from')?.value || '';
     const dateTo = document.getElementById('filter-date-to')?.value || '';
     
+    console.log('Filtering with:', { searchTerm, familiarFilter, cycleFilter, polarityFilter, dateFrom, dateTo });
+    
     return AppState.sessions.filter(session => {
         // Search filter
         if (searchTerm) {
@@ -600,7 +600,21 @@ function renderExpandedSession(session) {
     html += '<div class="divider-light"></div>';
     html += '<div class="detail-section">';
     html += `<div class="detail-label">SESSION METADATA</div>`;
-    html += `<div class="detail-row"><span class="detail-key">Date:</span> ${new Date(session.timestamp).toLocaleString()}</div>`;
+    
+    // Format date in local timezone
+    const date = new Date(session.timestamp);
+    const localDate = date.toLocaleDateString('en-US', { 
+        year: 'numeric', 
+        month: '2-digit', 
+        day: '2-digit' 
+    });
+    const localTime = date.toLocaleTimeString('en-US', { 
+        hour: '2-digit', 
+        minute: '2-digit',
+        hour12: true
+    });
+    
+    html += `<div class="detail-row"><span class="detail-key">Date:</span> ${localDate} ${localTime}</div>`;
     html += `<div class="detail-row"><span class="detail-key">Matter:</span> ${session.matter}</div>`;
     if (session.coordinates) {
         html += `<div class="detail-row"><span class="detail-key">Coordinates:</span> ${session.coordinates}</div>`;
