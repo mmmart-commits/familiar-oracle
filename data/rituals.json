@@ -1,14 +1,14 @@
 {
   "_comment": "Rituals database for The Familiar's Anthology of Empathetic Cycles",
   "_structure": "18 Cycles × 13 Familiars (Cycle XVIII has 12)",
-  o
+  
   "I": {
     "ARCHIVIST": {
       "function": "trace deviation within repetition",
       "setup": "record or sample a gesture you've already used in another piece",
       "action": "replay it five times, each time changing only your distance to the sound (mic placement, gain staging, room perspective)",
       "prompt": "Which version feels closest to memory, and which feels closest to fact?",
-      "note": "Document the differences as if describing soil strata—colour, density, residue. No adjectives of taste."
+      "note": "Document the differences as if describing soil strata - colour, density, residue. No adjectives of taste."
     },
     "MIRROR": {
       "function": "reveal unacknowledged emotion in the sound",
