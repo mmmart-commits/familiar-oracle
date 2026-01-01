@@ -119,7 +119,7 @@ const TAROT = {
     const imageNumber = String(card.id).padStart(2, '0');
     return `assets/a${imageNumber}.jpg`;
 }
-
+};
 
 // Export for use in other modules
 if (typeof module !== 'undefined' && module.exports) {
