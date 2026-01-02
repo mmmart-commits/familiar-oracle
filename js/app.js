@@ -218,6 +218,7 @@ function proceedToOracle() {
 }
 
 function selectCycle(cycleId) {
+    console.log('Cycle ID received:', cycleId, 'Type:', typeof cycleId);
     const session = AppState.currentSession;
     session.cycle = cycleId;
     
