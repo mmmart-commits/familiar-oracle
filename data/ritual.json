@@ -1,0 +1,98 @@
+{
+  "_comment": "Rituals database for The Familiar's Anthology of Empathetic Cycles",
+  "_structure": "18 Cycles × 13 Familiars (Cycle XVIII has 12)",
+  
+  "I": {
+    "ARCHIVIST": {
+      "function": "trace deviation within repetition",
+      "setup": "record or sample a gesture you've already used in another piece",
+      "action": "replay it five times, each time changing only your distance to the sound (mic placement, gain staging, room perspective)",
+      "prompt": "Which version feels closest to memory, and which feels closest to fact?",
+      "note": "Document the differences as if describing soil strata - colour, density, residue. No adjectives of taste."
+    },
+    "MIRROR": {
+      "function": "reveal unacknowledged emotion in the sound",
+      "setup": "play your most recent unfinished mix quietly enough that you can hear your own breathing over it",
+      "action": "every time you feel the urge to adjust something, pause and note the body region where the discomfort appears",
+      "prompt": "What does this sound want from you that you keep declining?",
+      "note": "do not fix the mix; sit with the transcription of sensations"
+    },
+    "THERAPIST": {
+      "function": "somatic re-grounding through subtraction",
+      "setup": "open a session that feels overworked or anxious",
+      "action": "lower the overall volume until it nearly disappears. Keep listening for five minutes",
+      "prompt": "If the track could rest, what would that rest sound like?",
+      "note": "The goal is not completion but relief; save the session under a new name ending in '—enough'"
+    },
+    "TRICKSTER": {
+      "function": "disrupt over-familiar logic chains",
+      "setup": "take a multitrack session and solo the least important or most forgotten stem",
+      "action": "treat that soloed element as the new protagonist; rebuild accompaniment around it",
+      "prompt": "The mistake got here first—can you keep up?",
+      "note": "when done, delete the original master bus and replace it with this version's silence"
+    },
+    "ORACLE": {
+      "function": "reset orientation, open symbolic space",
+      "setup": "light, stillness, a single continuous tone",
+      "action": "write or speak one sentence beginning 'The vessel remembers…' and another 'The residue forgets…'",
+      "prompt": "When their meanings cross, end the tone",
+      "note": "archive the recording; mark it as a threshold session. Don't revisit it for seven days"
+    },
+    "CUSTODIAN": {
+      "function": "establish ritual hygiene before the Work begins",
+      "setup": "open an old session you never finished. Do not play it yet",
+      "action": "consolidate all regions, remove empty tracks, rename files by function not by date",
+      "prompt": "A clean vessel hears more clearly. What was hidden by clutter?",
+      "note": "Save as a new version with today's date. The act of ordering is the first transformation"
+    },
+    "ENGINEER": {
+      "function": "[paste from anthology]",
+      "setup": "[paste from anthology]",
+      "action": "[paste from anthology]",
+      "prompt": "[paste from anthology]",
+      "note": "[paste from anthology]"
+    },
+    "TRANSLATOR": {
+      "function": "[paste from anthology]",
+      "setup": "[paste from anthology]",
+      "action": "[paste from anthology]",
+      "prompt": "[paste from anthology]",
+      "note": "[paste from anthology]"
+    },
+    "PILGRIM": {
+      "function": "[paste from anthology]",
+      "setup": "[paste from anthology]",
+      "action": "[paste from anthology]",
+      "prompt": "[paste from anthology]",
+      "note": "[paste from anthology]"
+    },
+    "SEER": {
+      "function": "[paste from anthology]",
+      "setup": "[paste from anthology]",
+      "action": "[paste from anthology]",
+      "prompt": "[paste from anthology]",
+      "note": "[paste from anthology]"
+    },
+    "CARETAKER": {
+      "function": "[paste from anthology]",
+      "setup": "[paste from anthology]",
+      "action": "[paste from anthology]",
+      "prompt": "[paste from anthology]",
+      "note": "[paste from anthology]"
+    },
+    "CARTOGRAPHER": {
+      "function": "[paste from anthology]",
+      "setup": "[paste from anthology]",
+      "action": "[paste from anthology]",
+      "prompt": "[paste from anthology]",
+      "note": "[paste from anthology]"
+    },
+    "GHOST": {
+      "function": "[paste from anthology]",
+      "setup": "[paste from anthology]",
+      "action": "[paste from anthology]",
+      "prompt": "[paste from anthology]",
+      "note": "[paste from anthology]"
+    }
+  }
+}
