@@ -3,22 +3,19 @@
  * Polarity calculation, familiar assignment, cycle suggestions, ritual retrieval
  */
 
-// Will be loaded from rituals.json
+// Load rituals immediately when script loads
 let RITUALS_DATA = null;
 
-// Load rituals from JSON file
-async function loadRituals() {
-    if (RITUALS_DATA) return RITUALS_DATA;
-    
+// Immediately start loading rituals
+(async function() {
     try {
         const response = await fetch('data/rituals.json');
         RITUALS_DATA = await response.json();
-        return RITUALS_DATA;
+        console.log('Rituals loaded:', Object.keys(RITUALS_DATA).length, 'cycles');
     } catch (error) {
         console.error('Error loading rituals:', error);
-        return null;
     }
-}
+})();
 
 const Oracle = {
     
@@ -253,7 +250,7 @@ const Oracle = {
             "CONJUNCTION": ["IX", "X", "XI"],
             "FERMENTATION": ["XII", "XIII"],
             "DISTILLATION": ["XIV", "XV", "XVI"],
-            "COAGULATION": ["XVII", "XVIII"]
+            "COAGULATION": ["XVII"]
         };
         
         const poleA = vector.split('-')[0];
@@ -289,8 +286,7 @@ const Oracle = {
             "XIV": "rise",
             "XV": "sublimate",
             "XVI": "returning vapors",
-            "XVII": "solidify",
-            "XVIII": "fix"
+            "XVII": "solidify"
         };
         
         return names[cycleId] || "unknown";
@@ -319,11 +315,9 @@ const Oracle = {
     },
     
     /**
-     * Get ritual for a cycle-familiar combination
+     * Get ritual for a cycle-familiar combination (now synchronous)
      */
-    async getRitual(cycleId, familiar) {
-        await loadRituals();
-        
+    getRitual(cycleId, familiar) {
         if (!RITUALS_DATA || !RITUALS_DATA[cycleId] || !RITUALS_DATA[cycleId][familiar]) {
             return {
                 function: "[ritual not yet documented]",
