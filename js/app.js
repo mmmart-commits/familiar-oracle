@@ -174,12 +174,12 @@ function flipCard(index) {
     
     // Show card face after flip animation
     setTimeout(() => {
-        const reversedLabel = card.reversed ? ' (R)' : '';
-        cardEl.innerHTML = `
-            <div class="card-number">${String(card.position).padStart(2, '0')}</div>
-            <div class="card-name">${card.name_en}${reversedLabel}</div>
-        `;
-    }, 150);
+    const cardImage = TAROT.getCardImage(card);
+    cardEl.innerHTML = `
+        <img src="${cardImage}" alt="${card.name_en}" class="card-image">
+    `;
+}, 150);
+
     
     // Check if all cards revealed
     const allRevealed = session.draw.every(c => c.revealed);
@@ -289,16 +289,13 @@ function renderCardBacks(cards) {
             <div class="tarot-card card-back ${reversedClass}" 
                  data-card-index="${index}"
                  onclick="flipCard(${index})">
-                <div class="card-back-design">
-                    <div class="card-number">${String(card.position).padStart(2, '0')}</div>
-                    <div class="card-back-symbol">✶</div>
-                </div>
+                <img src="assets/cardback.jpg" alt="Card back" class="card-image">
             </div>
         `;
     });
     
     html += '</div>';
-    html += '<p class="field-help" style="text-align: center; margin-top: var(--space-md);">Click each card to reveal</p>';
+    html += '<p class="field-help" style="text-align: center; margin-top: var(--space-md);">click each card to reveal</p>';
     
     drawDisplay.innerHTML = html;
 }
