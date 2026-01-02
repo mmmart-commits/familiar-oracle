@@ -1,14 +1,15 @@
 {
   "_comment": "Rituals database for The Familiar's Anthology of Empathetic Cycles",
-  "_structure": "18 Cycles × 13 Familiars (Cycle XVIII has 12)",
+  "_structure": "17 Cycles × 13 Familiars (Cycle XVIII has been excluded for the time being)",
   
+
   "I": {
     "ARCHIVIST": {
       "function": "trace deviation within repetition",
       "setup": "record or sample a gesture you've already used in another piece",
       "action": "replay it five times, each time changing only your distance to the sound (mic placement, gain staging, room perspective)",
       "prompt": "Which version feels closest to memory, and which feels closest to fact?",
-      "note": "Document the differences as if describing soil strata - colour, density, residue. No adjectives of taste."
+      "note": "Document the differences as if describing soil strataâ€”colour, density, residue. No adjectives of taste"
     },
     "MIRROR": {
       "function": "reveal unacknowledged emotion in the sound",
@@ -22,77 +23,1565 @@
       "setup": "open a session that feels overworked or anxious",
       "action": "lower the overall volume until it nearly disappears. Keep listening for five minutes",
       "prompt": "If the track could rest, what would that rest sound like?",
-      "note": "The goal is not completion but relief; save the session under a new name ending in '—enough'"
+      "note": "The goal is not completion but relief; save the session under a new name ending in â€œâ€“enoughâ€"
     },
     "TRICKSTER": {
       "function": "disrupt over-familiar logic chains",
       "setup": "take a multitrack session and solo the least important or most forgotten stem",
       "action": "treat that soloed element as the new protagonist; rebuild accompaniment around it",
-      "prompt": "The mistake got here first—can you keep up?",
-      "note": "when done, delete the original master bus and replace it with this version's silence"
+      "prompt": "The mistake got here firstâ€”can you keep up?",
+      "note": "when done, delete the original master bus and replace it with this version’s silence"
     },
     "ORACLE": {
       "function": "reset orientation, open symbolic space",
       "setup": "light, stillness, a single continuous tone",
-      "action": "write or speak one sentence beginning 'The vessel remembers…' and another 'The residue forgets…'",
-      "prompt": "When their meanings cross, end the tone",
-      "note": "archive the recording; mark it as a threshold session. Don't revisit it for seven days"
+      "action": "write or speak one sentence beginning â€œThe vessel remembersâ€¦â€ and another â€œThe residue forgetsâ€¦â€",
+      "prompt": "When their meanings cross, end the tone.",
+      "note": "archive the recording; mark it as a threshold session. Don’t revisit it for seven days"
     },
     "CUSTODIAN": {
       "function": "establish ritual hygiene before the Work begins",
       "setup": "open an old session you never finished. Do not play it yet",
       "action": "consolidate all regions, remove empty tracks, rename files by function not by date",
       "prompt": "A clean vessel hears more clearly. What was hidden by clutter?",
-      "note": "Save as a new version with today's date. The act of ordering is the first transformation"
+      "note": "Save as a new version with today’s date. The act of ordering is the first transformation"
     },
     "ENGINEER": {
-      "function": "[paste from anthology]",
-      "setup": "[paste from anthology]",
-      "action": "[paste from anthology]",
-      "prompt": "[paste from anthology]",
-      "note": "[paste from anthology]"
+      "function": "align intention with mechanism",
+      "setup": "power on every device in silence. Watch the meters idle; let the noise floor appear",
+      "action": "send tone at â€“18 LUFS through the master chain. Adjust nothing until the tone feels centred in your chest rather than your ears",
+      "prompt": "Where does accuracy become belief?",
+      "note": "print a ten-second test file and archive it as *zero_state*. Every future mix begins here, measured against this calm"
     },
     "TRANSLATOR": {
-      "function": "[paste from anthology]",
-      "setup": "[paste from anthology]",
-      "action": "[paste from anthology]",
-      "prompt": "[paste from anthology]",
-      "note": "[paste from anthology]"
+      "function": "invert the relationship between question and answer",
+      "setup": "write down a technical problem you’re facing in the current mix (e.g., â€œthe bass is too muddyâ€)",
+      "action": "reverse the sentence word by word, then speak it aloud. Apply the sonic opposite of what the reversal suggests",
+      "prompt": "What does the backwards answer reveal about the forwards question?",
+      "note": "if meaning dissolves, that dissolution is information. Proceed in the direction of maximum ambiguity"
     },
     "PILGRIM": {
-      "function": "[paste from anthology]",
-      "setup": "[paste from anthology]",
-      "action": "[paste from anthology]",
-      "prompt": "[paste from anthology]",
-      "note": "[paste from anthology]"
+      "function": "establish incremental discipline through minimal action",
+      "setup": "open a blank session. Set tempo to your resting heart rate",
+      "action": "place a single soundâ€”any soundâ€”on the timeline. Do not add a second. Listen to it alone for three minutes",
+      "prompt": "Can this single gesture sustain attention? If not, what is it lacking?",
+      "note": "Save and close. Return tomorrow and add one more element. The pilgrimage is patient"
     },
     "SEER": {
-      "function": "[paste from anthology]",
-      "setup": "[paste from anthology]",
-      "action": "[paste from anthology]",
-      "prompt": "[paste from anthology]",
-      "note": "[paste from anthology]"
+      "function": "perceive the finished work before beginning",
+      "setup": "sit in silence with headphones on, no audio playing",
+      "action": "imagine the completed track playing. Note its length, its arc, its emotional temperature. Write these down",
+      "prompt": "What does the piece sound like when it's done listening to itself?",
+      "note": "The vision will drift as you work. Let it. The first sight and the final form are rarely identical, but the glimpse guides the hand"
     },
     "CARETAKER": {
-      "function": "[paste from anthology]",
-      "setup": "[paste from anthology]",
-      "action": "[paste from anthology]",
-      "prompt": "[paste from anthology]",
-      "note": "[paste from anthology]"
+      "function": "preserve the work through stillness",
+      "setup": "stop playback before the final bar",
+      "action": "listen to the room for the duration that would have been the fade-out",
+      "prompt": "What survives when continuation is withheld?",
+      "note": "save the project but don’t reopen it today. Preservation begins in restraint"
     },
     "CARTOGRAPHER": {
-      "function": "[paste from anthology]",
-      "setup": "[paste from anthology]",
-      "action": "[paste from anthology]",
-      "prompt": "[paste from anthology]",
-      "note": "[paste from anthology]"
+      "function": "locate direction through quiet",
+      "setup": "draw a simple timeline on paper",
+      "action": "mark where silence occurs naturally in your session; label each pause as a coordinate",
+      "prompt": "How does stillness travel?",
+      "note": "treat these coordinates as landmarks when arranging your next section"
     },
     "GHOST": {
-      "function": "[paste from anthology]",
-      "setup": "[paste from anthology]",
-      "action": "[paste from anthology]",
-      "prompt": "[paste from anthology]",
-      "note": "[paste from anthology]"
+      "function": "register what’s missing",
+      "setup": "duplicate the master bus, invert its polarity, blend at â€“40 dB",
+      "action": "listen until only interference remains",
+      "prompt": "Whose absence hums here?",
+      "note": "render the remainder; name it *trace_01*"
+    }
+  },
+  "II": {
+    "ARCHIVIST": {
+      "function": "locate the afterimage of sound",
+      "setup": "align reels or files by their shared hum, not by waveform",
+      "action": "record in reverse, then play forward until the machines forget which direction is true",
+      "prompt": "What remains once sequence loses authority?",
+      "note": "catalogue interference by temperatureâ€”warm, cooling, extinct"
+    },
+    "MIRROR": {
+      "function": "hear posture through silence",
+      "setup": "fade monitors until rhythm falls below blood pressure",
+      "action": "sit before the mix as if before an old photograph; ask the quiet to describe your stance",
+      "prompt": "Which part of you is still posing?",
+      "note": "every heartbeat mistaken for kick is confession"
+    },
+    "THERAPIST": {
+      "function": "release tension through immersion",
+      "setup": "submerge the track in brown noise until melody loses itself",
+      "action": "keep the sub-bass constant; imagine it as a pulse that continues after recording stops",
+      "prompt": "Can grief sustain tone?",
+      "note": "when you exhale, printâ€”the true end hides in the breath"
+    },
+    "TRICKSTER": {
+      "function": "let malfunction reveal pattern",
+      "setup": "cross left and right buses until stereo collapses into a thread",
+      "action": "route reverb into its own send and solo the send; the signal will mock youâ€”let it",
+      "prompt": "When the mix laughs, do you answer?",
+      "note": "title the file *proof_of_life* and export with outputs disconnected"
+    },
+    "ORACLE": {
+      "function": "find pattern through temporal slippage",
+      "setup": "wait until the hour turns uneven; render one second of silence and loop it",
+      "action": "whisper *current* between every tenth cycle",
+      "prompt": "When the silence begins to watch you, what message arrives?",
+      "note": "stop when awareness reverses direction"
+    },
+    "CUSTODIAN": {
+      "function": "clarify purpose through language",
+      "setup": "rename every track according to its essence, not its source",
+      "action": "listen once with the new names visible",
+      "prompt": "Which element resists a name?",
+      "note": "what defies naming may not belong; leave it out"
+    },
+    "ENGINEER": {
+      "function": "verify continuity between sessions",
+      "setup": "load yesterday’s calibration tone",
+      "action": "route it through today’s chain and note any drift in pitch or phase",
+      "prompt": "Is difference error or evolution?",
+      "note": "if the tone feels older, lower its level by 1 dB and printâ€”the age has been compensated"
+    },
+    "TRANSLATOR": {
+      "function": "interpret argument between timelines",
+      "setup": "record a short phrase, reverse it, send to 100 % feedback delay",
+      "action": "play the original while the delay churns backwards",
+      "prompt": "Where does comprehension fail?",
+      "note": "translation grows in that gap"
+    },
+    "PILGRIM": {
+      "function": "turn repetition into dialogue",
+      "setup": "open yesterday’s single-sound session",
+      "action": "add one element that responds, not accompanies",
+      "prompt": "Do they hear each other?",
+      "note": "if yes, save; if no, remove and walk again tomorrow"
+    },
+    "SEER": {
+      "function": "map unseen agreement between motion and intent",
+      "setup": "draw a single automation curve across the entire timeline before listening",
+      "action": "play back and watch where sound and curve align",
+      "prompt": "Which moment already knew its shape?",
+      "note": "those alignments are the prophecy you already fulfilled"
+    },
+    "CARETAKER": {
+      "function": "preserve equilibrium after distortion",
+      "setup": "power down all gear; let capacitors discharge naturally",
+      "action": "when the LEDs fade, breathe once for each light extinguished",
+      "prompt": "How does rest record itself?",
+      "note": "log the duration of darkness; that is the length of recovery"
+    },
+    "CARTOGRAPHER": {
+      "function": "chart reflections as terrain",
+      "setup": "feed a short percussive sound into a long hallway reverb",
+      "action": "record the decay tail and mark where reflections peak",
+      "prompt": "Where does direction fold into distance?",
+      "note": "treat each peak as a coordinate in future spatial design"
+    },
+    "GHOST": {
+      "function": "embody what was lost in synchronisation",
+      "setup": "bounce the mix, nudge it forward one frame, and layer atop the original",
+      "action": "listen in mono until phasing breathes",
+      "prompt": "What memory hides in the comb?",
+      "note": "keep the quieter layer; erase the louder. The ghost should lead faintly"
+    }
+  },
+  "III": {
+    "ARCHIVIST": {
+      "function": "study deterioration as archive",
+      "setup": "open the oldest file you can still load. Do not play it; scrub until the waveform disintegrates into pixels",
+      "action": "map those shapes to your pulse pattern",
+      "prompt": "What vows remain legible after corrosion?",
+      "note": "every click is a fossil of voltage; every dropout, a forgotten promise"
+    },
+    "MIRROR": {
+      "function": "locate hidden resonance in the flesh",
+      "setup": "sit in the dark with monitors off",
+      "action": "hum at the frequency your chest recalls; record the air",
+      "prompt": "Does silence echo differently inside you?",
+      "note": "if playback sounds like absence, your body agreed to anonymity"
+    },
+    "THERAPIST": {
+      "function": "re-establish contact with non-signal",
+      "setup": "place your ear against the interface before turning it on",
+      "action": "match your breathing to the circuitry’s imagined rhythm",
+      "prompt": "Can you rest where proof is impossible?",
+      "note": "record nothing; this is healing without evidence"
+    },
+    "TRICKSTER": {
+      "function": "transform feedback into melody",
+      "setup": "route output into input until the loop sings",
+      "action": "mute everything except what shouldn’t exist",
+      "prompt": "How loud is revelation?",
+      "note": "when the meters panic, laugh and print. Title: *you_were_right_about_the_error*"
+    },
+    "ORACLE": {
+      "function": "commune with dormant power",
+      "setup": "power on and wait for the screen to dim",
+      "action": "whisper â€œlight is an old frequency.â€",
+      "prompt": "What charge remains after meaning drains?",
+      "note": "mark the silence following as *take 0*; residue completes the pattern in dreams"
+    },
+    "CUSTODIAN": {
+      "function": "discern purpose through restraint",
+      "setup": "walk the session without playback, reading only track names and routing paths",
+      "action": "mark three elements that serve no function; colour-code them but do not delete",
+      "prompt": "Can patience make the useless essential?",
+      "note": "tomorrow decide which survived idleness"
+    },
+    "ENGINEER": {
+      "function": "measure decay in alignment",
+      "setup": "play a sustained sine at 60 Hz through monitors for five minutes",
+      "action": "record the same tone to tape; compare phase drift",
+      "prompt": "Where does precision surrender to gravity?",
+      "note": "label the offset in milliseconds; this is time’s footprint"
+    },
+    "TRANSLATOR": {
+      "function": "reveal new identity through elongation",
+      "setup": "choose a melodic phrase and stretch to 400 %",
+      "action": "listen until recognition collapses",
+      "prompt": "What remains once language slows below thought?",
+      "note": "title the new file after whatever image first appears"
+    },
+    "PILGRIM": {
+      "function": "establish terrain through addition",
+      "setup": "return to your two-element dialogue",
+      "action": "add a third that listens to both but speaks to neither",
+      "prompt": "Does the space now feel walked?",
+      "note": "when the session becomes place, you’ve arrived"
+    },
+    "SEER": {
+      "function": "visualise invisible architecture",
+      "setup": "print each track as a stem; do not listen",
+      "action": "write their names and connect influences with lines",
+      "prompt": "Which connection surprises you most?",
+      "note": "play the full mix; what the map foresaw, the ear now hears"
+    },
+    "CARETAKER": {
+      "function": "stabilise the system after strain",
+      "setup": "mute all channels; leave the interface powered",
+      "action": "sit with the fan noise until its rhythm slows",
+      "prompt": "When does maintenance become meditation?",
+      "note": "end session only when the machine temperature matches your hands"
+    },
+    "CARTOGRAPHER": {
+      "function": "treat EQ curves as topography",
+      "setup": "draw each filter movement on graph paper",
+      "action": "shade resonant peaks darker than cuts",
+      "prompt": "What landscape are you excavating?",
+      "note": "keep the drawing near the console; it’s your terrain memory"
+    },
+    "GHOST": {
+      "function": "inhabit the trace left by erasure",
+      "setup": "delete a take, then immediately undo",
+      "action": "export the undo buffer as audio",
+      "prompt": "What did forgetting sound like?",
+      "note": "store under *absent_track_03*; play only when nothing else plays"
+    }
+  },
+  "IV": {
+    "ARCHIVIST": {
+      "function": "catalogue the residue of process",
+      "setup": "open the oldest project you can still corrupt",
+      "action": "disable all plug-ins and render the remainder",
+      "prompt": "What does broken organisation sound like?",
+      "note": "duplicate the file three timesâ€”echo-1, echo-2, echo-3â€”and pan them apart.  Measure the silence between peaks; that interval is your personal sample rate"
+    },
+    "MIRROR": {
+      "function": "confront the echo of self",
+      "setup": "insert a 333 ms delay on the master bus",
+      "action": "speak once; when your voice returns, answer it quietly",
+      "prompt": "Which voice is truerâ€”the one that waited or the one that rushed?",
+      "note": "save the session under the word you couldn’t say fast enough"
+    },
+    "THERAPIST": {
+      "function": "release residual tension from the circuit",
+      "setup": "disconnect the power strip and touch the chassis",
+      "action": "feel the vibration migrate through your fingers before reconnecting",
+      "prompt": "How do you forgive a hum?",
+      "note": "roll off below 40 Hz; the relief you hear is forgiveness translated to frequency"
+    },
+    "TRICKSTER": {
+      "function": "blur boundaries until truth leaks",
+      "setup": "route every channel into one aux; add a chorus plug-in at zero depth",
+      "action": "let automation rebel",
+      "prompt": "What admits distortion willingly?",
+      "note": "bounce it dry as *honest_phase.wav* â€” a future lie awaiting reuse"
+    },
+    "ORACLE": {
+      "function": "call the ancient grain of data",
+      "setup": "down-sample to 8-bit mono 11 kHz",
+      "action": "play quietly through full-range monitors",
+      "prompt": "Which artefact speaks your name?",
+      "note": "stop when shimmer folds into noise; that was the machine remembering you"
+    },
+    "CUSTODIAN": {
+      "function": "devotion through deletion",
+      "setup": "recall the three marked elements from Cycle III",
+      "action": "delete one, keep twoâ€”no deliberation",
+      "prompt": "Can loss lighten structure?",
+      "note": "save under a new date; absence is ventilation"
+    },
+    "ENGINEER": {
+      "function": "rebuild order after collapse",
+      "setup": "reload the deleted session’s routing from memory alone",
+      "action": "re-patch cables by instinct, not notes",
+      "prompt": "What if accuracy is trust?",
+      "note": "when signal returns without clipping, document the pathâ€”it’s the map of recovery"
+    },
+    "TRANSLATOR": {
+      "function": "negotiate between opposites",
+      "setup": "duplicate the master bus and invert one side",
+      "action": "pan hard left/right, collapse to mono, listen for what survives",
+      "prompt": "What argument resolves in silence?",
+      "note": "print the survivor stem as *consensus.wav*"
+    },
+    "PILGRIM": {
+      "function": "walk through constructed space",
+      "setup": "treat automation curves as roads",
+      "action": "sweep a low-pass filter from 20 kHz to 100 Hz over the full track",
+      "prompt": "Where does resistance shape motion?",
+      "note": "each pause is a landmark; record coordinates"
+    },
+    "SEER": {
+      "function": "locate balance within motion",
+      "setup": "solo each stem and find its point of maximum energy",
+      "action": "mark those points; connect them across the timeline",
+      "prompt": "What constellation is forming?",
+      "note": "the center of that constellation is where the track speaks from"
+    },
+    "CARETAKER": {
+      "function": "protect continuity by pausing transmission",
+      "setup": "insert a one-bar gap of pure silence between sections",
+      "action": "listen to the edges of the gap until they soften",
+      "prompt": "Does absence heal continuity or expose it?",
+      "note": "print without dither; the raw cut is more honest"
+    },
+    "CARTOGRAPHER": {
+      "function": "translate structure into geography",
+      "setup": "sketch the arrangement as a spiral rather than a line",
+      "action": "label verse, chorus, bridge as elevations, valleys, ridges",
+      "prompt": "What path does the ear climb?",
+      "note": "keep the map visible during mix; it is navigation disguised as art"
+    },
+    "GHOST": {
+      "function": "animate the noise that leaks between tracks",
+      "setup": "solo bleed channelsâ€”headphone spill, distant mic, reverb tails",
+      "action": "amplify until interference breathes rhythm",
+      "prompt": "What uninvited guest is keeping time?",
+      "note": "save under *crosstalk_angel*; never solo it again, only listen through others"
+    }
+  },
+  "V": {
+    "ARCHIVIST": {
+      "function": "preserve difference through repetition",
+      "setup": "render the same thirty-second passage three times, unchanged",
+      "action": "rename them gospel I, II, III and align by transient",
+      "prompt": "Where does the voice begin to fracture?",
+      "note": "when phasing begins, raise the fader as an offering; the chorus is interference made sacred"
+    },
+    "MIRROR": {
+      "function": "let decay answer devotion",
+      "setup": "send the entire mix to one cathedral impulse and mute the dry signal",
+      "action": "whisper between the tails",
+      "prompt": "What does space confess back?",
+      "note": "render when you hear breath that isn’t yours; name the file *call_and_response_to_absence*"
+    },
+    "THERAPIST": {
+      "function": "honour equilibrium through restraint",
+      "setup": "set all faders to unity; let the system idle five minutes",
+      "action": "lower each fader by 1 dB left to right as a procession",
+      "prompt": "How loud is reverence?",
+      "note": "sit after the last channel; silence will bow in return"
+    },
+    "TRICKSTER": {
+      "function": "sanctify error by exaggeration",
+      "setup": "duplicate the master bus; apply a bit-crusher with randomised parameters",
+      "action": "route both through a limiter set to brick; watch the red light flicker",
+      "prompt": "When does distortion become prayer?",
+      "note": "stop when the clipping steadies; save nothing â€” devotion was the overload"
+    },
+    "ORACLE": {
+      "function": "translate ending into resonance",
+      "setup": "generate a sine at 432 Hz; fade it to the edge of perception",
+      "action": "speak the phrase â€œthis is what remains when measure ends.â€",
+      "prompt": "Can persistence replace certainty?",
+      "note": "stop the tone but leave the meters armed; capture the hum that follows"
+    },
+    "CUSTODIAN": {
+      "function": "gratitude through accounting",
+      "setup": "export a text file listing every track, plug-in, and routing decision",
+      "action": "read it aloud once",
+      "prompt": "What do you thank by naming?",
+      "note": "close the session; memory will keep what gratitude touches"
+    },
+    "ENGINEER": {
+      "function": "confirm structural integrity after overload",
+      "setup": "invert one channel of the master",
+      "action": "sum to mono; observe cancellations",
+      "prompt": "Which frequencies refuse disappearance?",
+      "note": "those survivors are truth tones; tag them as *amen_band*"
+    },
+    "TRANSLATOR": {
+      "function": "understand creation through inversion",
+      "setup": "reverse the finished mix",
+      "action": "listen once without comparison",
+      "prompt": "What meaning only exists backward?",
+      "note": "the reversed mix is translation pure; archive, don’t publish"
+    },
+    "PILGRIM": {
+      "function": "realise motion through retrospection",
+      "setup": "mute all automation",
+      "action": "play the mix as it was before movement",
+      "prompt": "Can stillness walk?",
+      "note": "if you hear the walking, the pilgrimage continues"
+    },
+    "SEER": {
+      "function": "foresee continuation inside completion",
+      "setup": "render the entire session to stereo",
+      "action": "don’t listen for seven days",
+      "prompt": "What returns unaltered?",
+      "note": "on the eighth day, what survives listening becomes the next path"
+    },
+    "CARETAKER": {
+      "function": "allow devotion to dissipate",
+      "setup": "power down every device; keep monitors for last",
+      "action": "listen to capacitors exhale",
+      "prompt": "Where does heat turn holy?",
+      "note": "write the shut-down order in your notebook; repetition of rest is maintenance"
+    },
+    "CARTOGRAPHER": {
+      "function": "trace liturgy through spatial design",
+      "setup": "visualise fader movement as procession paths",
+      "action": "draw the mix as concentric corridors of approach",
+      "prompt": "Which channel leads the faithful?",
+      "note": "keep this diagram for future balances; the room remembers steps"
+    },
+    "GHOST": {
+      "function": "let the residue sing alone",
+      "setup": "solo the tail of the last render",
+      "action": "loop until the shimmer feels self-sustaining",
+      "prompt": "Does silence worship back?",
+      "note": "save under *amen_noise*; this is the true coda"
+    }
+  },
+  "VI": {
+    "ARCHIVIST": {
+      "function": "preserve every evolution as scripture",
+      "setup": "duplicate the project before each major change; name the folders sequentially like psalms (v01-dawn, v02-flood, v03-dust)",
+      "action": "compare versions and listen for what the mix remembers without you",
+      "prompt": "Which differences sound deliberate though you never chose them?",
+      "note": "continuity itself is authorship"
+    },
+    "MIRROR": {
+      "function": "find patience in repetition",
+      "setup": "solo the track you keep fixing",
+      "action": "loop it for ten minutes while doing nothing",
+      "prompt": "When does correction become care?",
+      "note": "un-solo; the rest of the song has learned calm from your stillness"
+    },
+    "THERAPIST": {
+      "function": "moderate excess through reduction",
+      "setup": "identify the loudest element",
+      "action": "pull its fader down 3 dB and work an hour without restoring it",
+      "prompt": "Does the piece breathe easier without you?",
+      "note": "if impact is no longer missed, healing occurred"
+    },
+    "TRICKSTER": {
+      "function": "trust accident as teacher",
+      "setup": "disable one plug-in chain at random",
+      "action": "bounce immediately",
+      "prompt": "What vanished that shouldn’t have mattered?",
+      "note": "keep the accident as canon until the song argues otherwise"
+    },
+    "ORACLE": {
+      "function": "write patience into time",
+      "setup": "draw a slow linear fade by hand from full to silence",
+      "action": "observe how the line trembles with heartbeat",
+      "prompt": "Whose hand is visible when precision falters?",
+      "note": "the shape of your imperfection is signature"
+    },
+    "CUSTODIAN": {
+      "function": "divinate through organisation",
+      "setup": "sort all sessions by completion: finished, abandoned, fermenting",
+      "action": "move each to its folder; rename by mood not date",
+      "prompt": "Which titles refuse category?",
+      "note": "disorder reveals the living projects"
+    },
+    "ENGINEER": {
+      "function": "remind the system of time’s elasticity",
+      "setup": "change the sample rate one step up, render, reopen, then restore",
+      "action": "listen for the brief warp",
+      "prompt": "What does correction remember?",
+      "note": "keep both renders â€” the perfect and the bent"
+    },
+    "TRANSLATOR": {
+      "function": "resolve opposites through balance",
+      "setup": "route the master to two busses â€” one upward-compressed, one downward-expanded",
+      "action": "blend until neither dominates",
+      "prompt": "Where does language rest between extremes?",
+      "note": "suspension is translation’s native tongue"
+    },
+    "PILGRIM": {
+      "function": "measure distance by recognition",
+      "setup": "open the very first session from Cycle I",
+      "action": "change nothing; listen",
+      "prompt": "Can you hear the miles you’ve walked?",
+      "note": "the gap between then and now is your proof of travel"
+    },
+    "SEER": {
+      "function": "read prophecy through totality",
+      "setup": "play all five previous cycles without pause",
+      "action": "write one sentence describing the through-line",
+      "prompt": "What thread ties noise to prayer?",
+      "note": "that sentence predicts the next five"
+    },
+    "CARETAKER": {
+      "function": "maintain longevity through deliberate interruption",
+      "setup": "stop mid-bar and leave the room",
+      "action": "return only when you’ve forgotten the last sound",
+      "prompt": "How long does forgetting take?",
+      "note": "resume quietly; rest is part of signal flow"
+    },
+    "CARTOGRAPHER": {
+      "function": "draw distance as rhythm",
+      "setup": "automate stereo width in slow cycles of expansion and collapse",
+      "action": "watch panning as breathing",
+      "prompt": "Does the mix inhale?",
+      "note": "save a snapshot when the space feels alive"
+    },
+    "GHOST": {
+      "function": "consecrate absence",
+      "setup": "delete a layer that’s been there since the first draft",
+      "action": "bounce before listening back",
+      "prompt": "What lingers where nothing plays?",
+      "note": "the phantom of what was will haunt in proportion to honesty"
+    }
+  },
+  "VII": {
+    "ARCHIVIST": {
+      "function": "document accuracy before decay",
+      "setup": "open the session exactly at midnight; align every transient to grid zero",
+      "action": "record a single transient on every eighth channel, gain rising 1 dB each time",
+      "prompt": "What slips when nothing should?",
+      "note": "whisper â€œmeasured once, remembered foreverâ€ out of phase and let the archive drift"
+    },
+    "MIRROR": {
+      "function": "witness self-erasure",
+      "setup": "place a small mirror between you and the monitors",
+      "action": "route all sends through shimmer until your reflection disappears",
+      "prompt": "Which image resists blur?",
+      "note": "pull the mirror away; the room becomes your double"
+    },
+    "THERAPIST": {
+      "function": "restore contact with current",
+      "setup": "disconnect the interface for three breaths, then reconnect",
+      "action": "place one hand on the desk, one on your chest until voltages agree",
+      "prompt": "What does stability feel like in skin?",
+      "note": "roll a slow sine from 20 Hz â†’ 0 Hz over 60 seconds; when vibration ceases, rest achieved"
+    },
+    "TRICKSTER": {
+      "function": "embrace system failure as rhythm",
+      "setup": "duplicate the master bus seven times and pan centre",
+      "action": "toggle Wi-Fi to provoke underruns; splice the pops into gospel",
+      "prompt": "Can error preach?",
+      "note": "freeze the artifact and export to a corrupted USB; release it to running water"
+    },
+    "ORACLE": {
+      "function": "speak through illumination",
+      "setup": "light one LED only",
+      "action": "layer pink-noise wash beneath a whispered reading of the last file name",
+      "prompt": "Does brightness translate to mercy?",
+      "note": "fade both until the LED seems to dim from sound itself"
+    },
+    "CUSTODIAN": {
+      "function": "maintain holiness of tools",
+      "setup": "clean every knob and fader with isopropyl",
+      "action": "touch each once more, acknowledging service",
+      "prompt": "What gesture thanks machinery?",
+      "note": "sign the cleaning cloth with today’s date; archive it as relic"
+    },
+    "ENGINEER": {
+      "function": "reconcile mechanical deviation",
+      "setup": "run tone at 1 kHz for 60 seconds",
+      "action": "record twice; compare phase",
+      "prompt": "Is the offset fault or personality?",
+      "note": "write the difference in samples on tape; the number is identity"
+    },
+    "TRANSLATOR": {
+      "function": "interpret noise as statement",
+      "setup": "capture background hum through condenser",
+      "action": "type its spectral peaks as words",
+      "prompt": "What language does interference speak?",
+      "note": "save the transcription under *hum_litany.txt*"
+    },
+    "PILGRIM": {
+      "function": "walk circles until arrival",
+      "setup": "loop a four-bar section indefinitely",
+      "action": "record yourself breathing once per bar",
+      "prompt": "When does loop become landscape?",
+      "note": "the moment you stop counting, you’ve arrived"
+    },
+    "SEER": {
+      "function": "read futures in automation graphs",
+      "setup": "open the automation lane for master gain",
+      "action": "draw one continuous curve across the project",
+      "prompt": "What horizon is hidden in amplitude?",
+      "note": "print without listening; prophecy is visual"
+    },
+    "CARETAKER": {
+      "function": "secure rest for the studio",
+      "setup": "shut off each component in reverse order of startup",
+      "action": "note the sequence of clicks and whines",
+      "prompt": "How does fatigue sound leaving?",
+      "note": "write the final noise as a word; tomorrow, greet it aloud"
+    },
+    "CARTOGRAPHER": {
+      "function": "rediscover bearings after noise",
+      "setup": "project the session timeline onto wall with a flashlight",
+      "action": "trace each section with pencil",
+      "prompt": "Where are you on this map of sound?",
+      "note": "circle the silence between movements; it’s home"
+    },
+    "GHOST": {
+      "function": "manifest delay as memory",
+      "setup": "duplicate a stem and nudge 23 samples",
+      "action": "sum to mono until comb-filtering breathes",
+      "prompt": "Who is breathing through the static?",
+      "note": "keep the phase shimmer faint; it’s the machine remembering you"
+    }
+  },
+  "VIII": {
+    "ARCHIVIST": {
+      "function": "preserve reference before work",
+      "setup": "recalibrate the 1 kHz tone you used last month",
+      "action": "note any drift but do not correct it",
+      "prompt": "What does deviation record?",
+      "note": "print the calibration noise at the head of the reel; this is the true tempo"
+    },
+    "MIRROR": {
+      "function": "let repetition expose disbelief",
+      "setup": "patch the output of your delay into its own return",
+      "action": "listen until repeats blur consonants",
+      "prompt": "Which syllables dissolve first?",
+      "note": "ease the feedback back a quarter turn â€” that’s trust restored"
+    },
+    "THERAPIST": {
+      "function": "reclaim calm through dynamic restraint",
+      "setup": "solo the vocal chain and touch the preamp trim slowly",
+      "action": "breathe until the needle steadies",
+      "prompt": "Where does urgency end?",
+      "note": "mark the level where the body, not the meter, relaxes"
+    },
+    "TRICKSTER": {
+      "function": "reassign purpose through error",
+      "setup": "send percussion through the vocal reverb",
+      "action": "keep it there",
+      "prompt": "What happens when function forgets itself?",
+      "note": "bounce dry; name the file *new_room* and never explain it"
+    },
+    "ORACLE": {
+      "function": "reduce meaning to essence",
+      "setup": "consolidate all tracks unedited",
+      "action": "export and play quietly through small speakers",
+      "prompt": "Does weight survive compression?",
+      "note": "if yes, archive; if not, re-enter"
+    },
+    "CUSTODIAN": {
+      "function": "prepare machines for endurance",
+      "setup": "close background processes, silence alerts",
+      "action": "listen to the hum that remains",
+      "prompt": "How many systems still whisper?",
+      "note": "record ten seconds; label *studio_breath*"
+    },
+    "ENGINEER": {
+      "function": "ensure temporal stability",
+      "setup": "open the project clock settings",
+      "action": "shift BPM Â±0.1 and observe the groove’s behaviour",
+      "prompt": "When does precision start to feel human?",
+      "note": "restore tempo but leave drift noted in metadata"
+    },
+    "TRANSLATOR": {
+      "function": "mediate between echo and impulse",
+      "setup": "record one handclap into a long feedback delay",
+      "action": "write down the rhythm of its repeats",
+      "prompt": "What syntax does reflection follow?",
+      "note": "rebuild a beat using only those intervals"
+    },
+    "PILGRIM": {
+      "function": "extend attention across fatigue",
+      "setup": "loop a section longer than comfort",
+      "action": "walk the room in time with it",
+      "prompt": "Can motion remain contemplative?",
+      "note": "stop when footsteps sync by accident; that’s completion"
+    },
+    "SEER": {
+      "function": "perceive arc beyond hearing",
+      "setup": "visualise the waveform zoomed out to full track length",
+      "action": "mark where density fades",
+      "prompt": "Is the end already visible?",
+      "note": "those pale regions foretell dissolution"
+    },
+    "CARETAKER": {
+      "function": "enforce pause between sessions",
+      "setup": "set a timer for ten minutes of silence after each render",
+      "action": "do nothing, even mentally",
+      "prompt": "What does restraint repair?",
+      "note": "the song’s longevity lives in this interval"
+    },
+    "CARTOGRAPHER": {
+      "function": "map space against expectation",
+      "setup": "walk between speakers during playback",
+      "action": "note where phantom centre shifts",
+      "prompt": "Where does image betray geometry?",
+      "note": "draw the sweet spot’s drift; it’s your studio’s tide chart"
+    },
+    "GHOST": {
+      "function": "reveal what the machines remember",
+      "setup": "reopen a project closed months ago",
+      "action": "press play before any files relink",
+      "prompt": "What ghost plays through missing paths?",
+      "note": "record the error message tone; it’s your sÃ©ance bell"
+    }
+  },
+  "IX": {
+    "ARCHIVIST": {
+      "function": "catalogue age through repetition",
+      "setup": "pull up an old stem that still has headroom",
+      "action": "run it through the same chain three times â€” once clean, once too hot, once breaking",
+      "prompt": "What burns off first?",
+      "note": "keep the middle pass; it carries history without apology"
+    },
+    "MIRROR": {
+      "function": "recognise responsiveness in texture",
+      "setup": "ride a single channel from silence to full over one minute",
+      "action": "feel when the texture starts to breathe back",
+      "prompt": "When does control become communication?",
+      "note": "mark the point where the sound acknowledges you"
+    },
+    "THERAPIST": {
+      "function": "turn hum into pulse",
+      "setup": "leave the monitors humming before a take",
+      "action": "breathe with the room tone",
+      "prompt": "Does quiet feel heavier than sound?",
+      "note": "leave the buzz inside the mix; it’s the song’s blood"
+    },
+    "TRICKSTER": {
+      "function": "reintroduce imperfection as character",
+      "setup": "split a vocalâ€”one clean, one through a dying preamp",
+      "action": "blend until the clean grows nervous",
+      "prompt": "How much error feels alive?",
+      "note": "alchemy needs a contaminant"
+    },
+    "ORACLE": {
+      "function": "merge process and product",
+      "setup": "print to tape or resample at â€“3 dB",
+      "action": "blend the printed version 20% under the digital master",
+      "prompt": "What does union sound like?",
+      "note": "stop before polish replaces breath"
+    },
+    "CUSTODIAN": {
+      "function": "re-evaluate what survives",
+      "setup": "open a folder from a year ago",
+      "action": "delete only the perfect takes",
+      "prompt": "What remains when you stop hoarding beauty?",
+      "note": "keep one file for its flaws; label *kept_for_air*"
+    },
+    "ENGINEER": {
+      "function": "measure fatigue in circuitry",
+      "setup": "record a sine wave through an analog chain",
+      "action": "loop the pass ten times; note the gradual loss of brightness",
+      "prompt": "Is warmth just entropy?",
+      "note": "print the tenth loop as reference for age"
+    },
+    "TRANSLATOR": {
+      "function": "bind present tone to past reflection",
+      "setup": "feed an old render into a live input chain",
+      "action": "delay the new track by exactly 400 ms",
+      "prompt": "What do past and present say to each other?",
+      "note": "the overlap is the true translation"
+    },
+    "PILGRIM": {
+      "function": "accept duration as form",
+      "setup": "set playback at half speed",
+      "action": "listen to the entire piece without moving",
+      "prompt": "Can endurance replace progress?",
+      "note": "stand when you’ve forgotten tempo"
+    },
+    "SEER": {
+      "function": "read wear as wisdom",
+      "setup": "open the waveform and observe its erosion",
+      "action": "mark every visible clip or over-compression artifact",
+      "prompt": "Which scars predict the next stage?",
+      "note": "beauty begins where precision ends"
+    },
+    "CARETAKER": {
+      "function": "stabilise degradation",
+      "setup": "re-save corrupted sessions under new names",
+      "action": "embed screenshots of plugin chains in each folder",
+      "prompt": "What does care mean when time eats format?",
+      "note": "every backup is an act of faith"
+    },
+    "CARTOGRAPHER": {
+      "function": "chart imperfection across the stereo field",
+      "setup": "play the mix and mark each pan position where clarity falters",
+      "action": "overlay a visual grid of the weak points",
+      "prompt": "Where does the mix lean?",
+      "note": "imbalance is topography â€” the mix’s landscape revealed"
+    },
+    "GHOST": {
+      "function": "document the residue of lost fidelity",
+      "setup": "re-record a master through cheap earbuds held to the mic",
+      "action": "amplify the hiss until it hums",
+      "prompt": "What does nostalgia sound like in binary?",
+      "note": "save it quietly beneath the main track; it will haunt playback forever"
+    }
+  },
+  "X": {
+    "ARCHIVIST": {
+      "function": "record emotion as metadata",
+      "setup": "keep a notebook beside the preamp",
+      "action": "after each take, note one sensory fact instead of a judgment",
+      "prompt": "What did the air feel like?",
+      "note": "when you comp later, the handwriting will tell you which pass lived"
+    },
+    "MIRROR": {
+      "function": "locate honesty through interference",
+      "setup": "record one clean and one contact-mic version of the same source",
+      "action": "sum them in mono until they fight",
+      "prompt": "Where does truth distort?",
+      "note": "leave the collision; it’s the portrait of intent"
+    },
+    "THERAPIST": {
+      "function": "re-establish proportion",
+      "setup": "set the mic twice as far as instinct says",
+      "action": "perform quietly, lift the gain until the room joins the voice",
+      "prompt": "When does intimacy turn into intrusion?",
+      "note": "stop when playback feels like eavesdropping"
+    },
+    "TRICKSTER": {
+      "function": "scramble comprehension to reveal emotion",
+      "setup": "re-record a line reversed, syllable by syllable",
+      "action": "flip it back in post so meaning teeters on the edge",
+      "prompt": "What happens when sense lags behind feeling?",
+      "note": "treat the artifacts as rhythm, not flaw"
+    },
+    "ORACLE": {
+      "function": "let gesture define edit",
+      "setup": "record an improvisation straight to tape or looping buffer",
+      "action": "stop mid-breath; slice exactly where you exhaled",
+      "prompt": "Which moment admits completion?",
+      "note": "everything before was practice, after is residue"
+    },
+    "CUSTODIAN": {
+      "function": "preserve medium integrity",
+      "setup": "de-mag heads, wipe dust from reels",
+      "action": "thread fresh leader and label with date",
+      "prompt": "How pure must the vessel be to hold memory?",
+      "note": "cleanliness is respect, not fetish"
+    },
+    "ENGINEER": {
+      "function": "translate emotion into measurable coherence",
+      "setup": "align both mic captures from the MIRROR’s exercise",
+      "action": "slide until correlation peaks, then back off 1 ms",
+      "prompt": "Does perfect alignment erase soul?",
+      "note": "keep the slight smear; that’s warmth quantified"
+    },
+    "TRANSLATOR": {
+      "function": "interpret near-silence",
+      "setup": "record a whisper reading of the lyrics",
+      "action": "layer beneath the vocal until it becomes breath texture",
+      "prompt": "Can meaning survive below audibility?",
+      "note": "mute it halfway through the song; absence finishes the sentence"
+    },
+    "PILGRIM": {
+      "function": "test stamina of presence",
+      "setup": "hit record and play one instrument for as long as focus allows",
+      "action": "when attention breaks, stop instantly",
+      "prompt": "How long can sincerity last unbroken?",
+      "note": "duration is faith made audible"
+    },
+    "SEER": {
+      "function": "foresee mix shape through resonance",
+      "setup": "solo each stem and note the frequency where body vibrates",
+      "action": "plot those frequencies as constellations",
+      "prompt": "Where do vibrations converge?",
+      "note": "the cluster with the deepest hum is the track’s heart"
+    },
+    "CARETAKER": {
+      "function": "protect intimacy post-take",
+      "setup": "mute all tracks; sit in the room for one minute",
+      "action": "listen to fan hums, count them as breaths",
+      "prompt": "How do you close a space gently?",
+      "note": "save, name, and walk away without playback"
+    },
+    "CARTOGRAPHER": {
+      "function": "visualise proximity as terrain",
+      "setup": "sketch the mic positions relative to performer",
+      "action": "annotate perceived warmth and clarity zones",
+      "prompt": "Where does closeness become distortion?",
+      "note": "keep the map with the session â€” geography of vulnerability"
+    },
+    "GHOST": {
+      "function": "allow unwanted bleed to speak",
+      "setup": "solo the spill from other takes",
+      "action": "fade it until it sighs under the mix",
+      "prompt": "Who else was in the room?",
+      "note": "the interference is companionship disguised as noise"
+    }
+  },
+  "XI": {
+    "ARCHIVIST": {
+      "function": "document weight as sediment",
+      "setup": "drive the preamp until it folds, then back off one notch",
+      "action": "print both over-driven and clean passes; layer them until grit behaves like memory",
+      "prompt": "Where does pressure stop being damage?",
+      "note": "write in the margin: â€œsaturation is evidence.â€"
+    },
+    "MIRROR": {
+      "function": "re-encounter pulse as trust",
+      "setup": "build rhythm from low end up",
+      "action": "when you can feel the kick in your throat, mute it and keep the pulse running inside you",
+      "prompt": "Can the body keep time alone?",
+      "note": "return the kick; align it with your chest, not the grid"
+    },
+    "THERAPIST": {
+      "function": "soften intensity through resonance",
+      "setup": "run a vocal or melodica through a spring tank until it drones",
+      "action": "record via room mics, not line out",
+      "prompt": "When does echo stop being fear?",
+      "note": "stop when feedback flutters like breath; equilibrium found"
+    },
+    "TRICKSTER": {
+      "function": "play the tape as percussion",
+      "setup": "print the mix to cassette emulator",
+      "action": "ride the transport â€” quick rewinds, half-speed bursts, start-stops",
+      "prompt": "What if rhythm is damage in time?",
+      "note": "chop those scars into the grid; let imperfection drum"
+    },
+    "ORACLE": {
+      "function": "watch decay become pulse",
+      "setup": "send the full mix through a single analog delay near self-oscillation",
+      "action": "record ten minutes of drift",
+      "prompt": "When does persistence become prophecy?",
+      "note": "stop before it resolves; revelation is unfinished"
+    },
+    "CUSTODIAN": {
+      "function": "sustain reliability under strain",
+      "setup": "inspect every cable connection mid-session",
+      "action": "tighten, reseat, dust",
+      "prompt": "What structure holds when heat rises?",
+      "note": "small acts of care keep the ritual from burning through"
+    },
+    "ENGINEER": {
+      "function": "measure density objectively",
+      "setup": "run pink noise through the mix bus",
+      "action": "observe LUFS and crest factor; document both",
+      "prompt": "Can loudness confess fatigue?",
+      "note": "tape the numbers to the console; humility by data"
+    },
+    "TRANSLATOR": {
+      "function": "let distortion interpret tone",
+      "setup": "split signal pre- and post-saturation",
+      "action": "cross-fade slowly between them",
+      "prompt": "Which version tells the truth?",
+      "note": "translation lives where timbre forgets origin"
+    },
+    "PILGRIM": {
+      "function": "test endurance in escalation",
+      "setup": "automate master gain +0.5 dB every 32 bars",
+      "action": "listen until mix begs relief",
+      "prompt": "Does devotion clip?",
+      "note": "back down one step; that restraint is grace"
+    },
+    "SEER": {
+      "function": "perceive meaning in reduction curves",
+      "setup": "open the gain-reduction graph",
+      "action": "read the motion of attack and release like handwriting",
+      "prompt": "What future hides in envelope shape?",
+      "note": "every swell predicts a pulse yet to be written"
+    },
+    "CARETAKER": {
+      "function": "prevent burnout of machines and self",
+      "setup": "after each render, power monitors off first",
+      "action": "wait until capacitors drain silent",
+      "prompt": "What tone is rest?",
+      "note": "write that silence’s duration in the log"
+    },
+    "CARTOGRAPHER": {
+      "function": "map pressure across frequency terrain",
+      "setup": "analyse RMS by band",
+      "action": "sketch the slopes where energy peaks",
+      "prompt": "Where do mountains of sound erode?",
+      "note": "this drawing is the geography of force"
+    },
+    "GHOST": {
+      "function": "hear what processing erased",
+      "setup": "invert a pre-compression stem against the mastered one",
+      "action": "amplify the residue until it whispers",
+      "prompt": "What remains when control fades?",
+      "note": "keep that whisper under the mix; the absent breath remembers"
+    }
+  },
+  "XII": {
+    "ARCHIVIST": {
+      "function": "document aftermath as lineage",
+      "setup": "gather all renders from the last month",
+      "action": "label each with a single word describing its temperature â€” cold, warm, spent, lucid",
+      "prompt": "What tone did endurance leave behind?",
+      "note": "this taxonomy is not history but pulse memory"
+    },
+    "MIRROR": {
+      "function": "recognise peace through restraint",
+      "setup": "play the completed mix at whisper level",
+      "action": "watch your breathing; notice if it syncs",
+      "prompt": "Can stillness mirror completion?",
+      "note": "if the body no longer leans forward, the track is finished"
+    },
+    "THERAPIST": {
+      "function": "turn fatigue into form",
+      "setup": "duplicate the mix, filter at 200 Hz, and lower â€“24 dB",
+      "action": "let it run silently beneath playback",
+      "prompt": "What does quiet support feel like?",
+      "note": "the inaudible bass grounds the nervous system"
+    },
+    "TRICKSTER": {
+      "function": "disguise healing as experiment",
+      "setup": "reverse the master, process it through a random effect chain",
+      "action": "bounce and flip forward",
+      "prompt": "Can renewal arrive backward?",
+      "note": "keep whatever anomaly feels kind"
+    },
+    "ORACLE": {
+      "function": "locate essence through collapse",
+      "setup": "sum the entire mix to mono through one speaker at chest height",
+      "action": "walk away until the bass disappears; return until it reappears",
+      "prompt": "Where does weight live?",
+      "note": "mark that spot on the floor; all future takes begin there"
+    },
+    "CUSTODIAN": {
+      "function": "prepare mediums for next use",
+      "setup": "wipe heads, untangle cables, clean filters",
+      "action": "log all maintenance performed",
+      "prompt": "How do tools remember gratitude?",
+      "note": "write â€œpeaceâ€ on the last line of the entry"
+    },
+    "ENGINEER": {
+      "function": "reconcile signal and power",
+      "setup": "run 60 Hz tone through the DI chain",
+      "action": "match voltage between tube pre and DI by ear",
+      "prompt": "Where does precision meet warmth?",
+      "note": "save both the clean and the aligned pass; tension preserved"
+    },
+    "TRANSLATOR": {
+      "function": "bridge work and rest",
+      "setup": "open a blank session",
+      "action": "import the last track and loop the quietest bar",
+      "prompt": "What language does silence speak after labour?",
+      "note": "let the loop play overnight; translation through fatigue"
+    },
+    "PILGRIM": {
+      "function": "replace making with witness",
+      "setup": "play the album start to finish without breaks",
+      "action": "take one step across the room per song",
+      "prompt": "Is distance a measure of faith?",
+      "note": "the final position is your proof of traversal"
+    },
+    "SEER": {
+      "function": "foresee closure through resonance",
+      "setup": "play pink noise filtered at 400 Hz",
+      "action": "note what emotion it stirs",
+      "prompt": "Which tone feels like goodbye?",
+      "note": "embed that tone beneath the final fade; prophecy fulfilled"
+    },
+    "CARETAKER": {
+      "function": "sanctify pause as continuity",
+      "setup": "stop all playback",
+      "action": "record ten seconds of room silence",
+      "prompt": "Can alignment exist without sound?",
+      "note": "layer the silence under every new track â€” invisible glue"
+    },
+    "CARTOGRAPHER": {
+      "function": "trace how space reacts to echo",
+      "setup": "send snare to two delays (3/8 left, 1/2 right)",
+      "action": "crossfeed them until rhythm argues with itself",
+      "prompt": "What terrain appears when timing collides?",
+      "note": "when echoes lock unexpectedly, freeze; that’s your new landscape"
+    },
+    "GHOST": {
+      "function": "honour remnants as memory",
+      "setup": "solo the ambience stem that shouldn’t exist â€” monitor spill, distant click",
+      "action": "raise it until it breathes louder than source",
+      "prompt": "What hides in phase error?",
+      "note": "print quietly beneath the final mix; loss given presence"
+    }
+  },
+  "XIII": {
+    "ARCHIVIST": {
+      "function": "preserve time dilation as texture",
+      "setup": "solo the sub-bus and render it at half speed, then double",
+      "action": "archive both in a folder named *Corpus Bassae*",
+      "prompt": "What happens when the same moment moves at two tempos?",
+      "note": "you’re not keeping takesâ€”you’re documenting duration"
+    },
+    "MIRROR": {
+      "function": "test empathy between frequencies",
+      "setup": "duplicate the bass a semitone up and filter both narrowly",
+      "action": "crossfade every four bars so neither dominates",
+      "prompt": "Can balance ache?",
+      "note": "tension itself is the reflection"
+    },
+    "THERAPIST": {
+      "function": "carve calm from impact",
+      "setup": "sweep a bell between 60â€“80 Hz until the room softens",
+      "action": "undercut the strongest resonance slightly",
+      "prompt": "What does relief sound like?",
+      "note": "calm is sculpted, not granted"
+    },
+    "TRICKSTER": {
+      "function": "recombine absence as rhythm",
+      "setup": "cut one low hit into four pieces, scatter across silence",
+      "action": "loop until timing feels wrong but alive",
+      "prompt": "Can brokenness dance?",
+      "note": "dub is collage pretending to be groove"
+    },
+    "ORACLE": {
+      "function": "find the root tone that remains after decay",
+      "setup": "solo a sine at the track’s tonic",
+      "action": "render exactly one minute",
+      "prompt": "What if tone is prayer?",
+      "note": "the fundamental is allegiance, not sound"
+    },
+    "CUSTODIAN": {
+      "function": "make mercy through tidying",
+      "setup": "consolidate regions, trim to exact bar lengths",
+      "action": "delete hidden automation",
+      "prompt": "What dust hides behind structure?",
+      "note": "cleanliness is a form of listening"
+    },
+    "ENGINEER": {
+      "function": "court failure to learn timing",
+      "setup": "drop your buffer size until playback stutters",
+      "action": "capture the glitch and re-import as percussion",
+      "prompt": "What rhythm is created by insufficiency?",
+      "note": "the system’s breath is the beat’s ghost"
+    },
+    "TRANSLATOR": {
+      "function": "converse with silence",
+      "setup": "duplicate the master bus and invert polarity",
+      "action": "sum to near silence",
+      "prompt": "What refuses cancellation?",
+      "note": "what leaks through is meaning untranslatable"
+    },
+    "PILGRIM": {
+      "function": "walk the same ground as new terrain",
+      "setup": "replay the last mix at 0.8 speed",
+      "action": "mark every place where you forget familiarity",
+      "prompt": "How does memory change pace?",
+      "note": "revision is pilgrimage in reverse"
+    },
+    "SEER": {
+      "function": "see through erasure",
+      "setup": "invert the waveform display’s colour scheme",
+      "action": "study where absence concentrates",
+      "prompt": "What shapes emerge when light retreats?",
+      "note": "prophecy glows strongest in shadow"
+    },
+    "CARETAKER": {
+      "function": "enact mercy after effort",
+      "setup": "power down the session, reopen in silence",
+      "action": "verify it still loads; don’t play it",
+      "prompt": "Can devotion be quiet?",
+      "note": "preservation is proof of care"
+    },
+    "CARTOGRAPHER": {
+      "function": "chart imbalance as motion",
+      "setup": "split stereo field at 100 Hz, pan lows 3% right",
+      "action": "listen for new gravity",
+      "prompt": "Where does asymmetry pull?",
+      "note": "imperfection is balance disguised"
+    },
+    "GHOST": {
+      "function": "render echo into eternity",
+      "setup": "record a reverb tail alone",
+      "action": "loop indefinitely until perception normalises",
+      "prompt": "Does forgetting have pitch?",
+      "note": "the ear forgets, but the heart doesn’t"
+    }
+  },
+  "XIV": {
+    "ARCHIVIST": {
+      "function": "archive movement as pattern",
+      "setup": "freeze every track, then import the render into a new session",
+      "action": "loop the final sixteen bars and draw a single hand-drawn automation curve",
+      "prompt": "What does the loop remember about you?",
+      "note": "when it plays back, you’re hearing motion stored as history"
+    },
+    "MIRROR": {
+      "function": "measure absence through delay",
+      "setup": "shift one melodic phrase a bar forward",
+      "action": "leave the gap untouched",
+      "prompt": "What fills the space before arrival?",
+      "note": "silence carries the emotion before sound confirms it"
+    },
+    "THERAPIST": {
+      "function": "rest the ear beneath awareness",
+      "setup": "lower the master until you can barely hear bass",
+      "action": "remain there five minutes",
+      "prompt": "Can exhaustion become balance?",
+      "note": "the mix heals itself when you stop proving control"
+    },
+    "TRICKSTER": {
+      "function": "surrender outcome to chance",
+      "setup": "freeze a bus, duplicate, strip plug-ins from one",
+      "action": "flip a coin to decide which remains",
+      "prompt": "Will the system choose clarity or accident?",
+      "note": "print both namesâ€”one false, one trueâ€”and never check which is which"
+    },
+    "ORACLE": {
+      "function": "turn time into texture",
+      "setup": "stretch a bounce 400%",
+      "action": "scrub through the waveform until one transient sounds like purpose",
+      "prompt": "Where does chance align with will?",
+      "note": "that sound is the next seed"
+    },
+    "CUSTODIAN": {
+      "function": "remember through loss",
+      "setup": "export a low-resolution MP3 reference",
+      "action": "tag with date, store beside the master",
+      "prompt": "Which version will memory prefer?",
+      "note": "in ten years, the artifact will feel more accurate than fidelity"
+    },
+    "ENGINEER": {
+      "function": "study conflict in control systems",
+      "setup": "map one knob to two opposing envelopes",
+      "action": "print before the DAW resolves",
+      "prompt": "When precision disagrees with itself, what is tone?",
+      "note": "compromise becomes signature"
+    },
+    "TRANSLATOR": {
+      "function": "interpret opposition as harmony",
+      "setup": "send one track to two busses with inverse EQ curves",
+      "action": "blend equally until neither dominates",
+      "prompt": "What does balance without consensus sound like?",
+      "note": "translation is tension that endures"
+    },
+    "PILGRIM": {
+      "function": "walk through completion without change",
+      "setup": "render the full session as one file, import to new project",
+      "action": "add nothing; simply place and save",
+      "prompt": "Is stillness also progress?",
+      "note": "tomorrow you may hear distance instead of repetition"
+    },
+    "SEER": {
+      "function": "perceive the hidden grammar of recurrence",
+      "setup": "listen to seven previous cycles in random order",
+      "action": "write down each recurring gesture",
+      "prompt": "Where has your attention settled?",
+      "note": "repetition is prophecy by another name"
+    },
+    "CARETAKER": {
+      "function": "embed pause as preservation",
+      "setup": "freeze all tracks, step away ten minutes",
+      "action": "don’t unfreeze immediatelyâ€”listen to the computer’s fan",
+      "prompt": "Can absence age gracefully?",
+      "note": "patience keeps the mix young"
+    },
+    "CARTOGRAPHER": {
+      "function": "sculpt distance as meaning",
+      "setup": "route two buses to one reverb with different pre-delays",
+      "action": "pan opposite; adjust until space feels navigable, not vast",
+      "prompt": "How far apart can two points feel intimate?",
+      "note": "when echo becomes geography, stop"
+    },
+    "GHOST": {
+      "function": "capture erasure itself",
+      "setup": "delete a track, undo, and render the undo buffer",
+      "action": "amplify the resulting silence",
+      "prompt": "What trace does absence leave?",
+      "note": "the deleted remembers differently each time you listen"
+    }
+  },
+  "XV": {
+    "ARCHIVIST": {
+      "function": "trace rhythm through cancellation",
+      "setup": "re-slice a kick into transient and tail; shift the tail forward two frames to overlap its own start",
+      "action": "invert phase on every even-numbered hit",
+      "prompt": "When rhythm cancels itself, what remains?",
+      "note": "the ghost of tempo is still danceable â€” that’s memory pretending to be beat"
+    },
+    "MIRROR": {
+      "function": "perceive hesitation as consciousness",
+      "setup": "duplicate the snare, reverse it, feed into a transient shaper with negative attack",
+      "action": "pitch the overhead bus down two semitones",
+      "prompt": "Can reflection disagree with itself?",
+      "note": "hesitation is the mirror breathing"
+    },
+    "THERAPIST": {
+      "function": "turn silence into pulse",
+      "setup": "low-pass the drums to 4 kHz and sit with the muffled field",
+      "action": "add a sidechain keyed to silence instead of bass",
+      "prompt": "Does calm require motion?",
+      "note": "every breath becomes a compressor’s release"
+    },
+    "TRICKSTER": {
+      "function": "disturb expectation until it learns patience",
+      "setup": "drag the kick one gridline late, the snare one early",
+      "action": "automate a compressor threshold to your typing speed",
+      "prompt": "Is chaos intelligence?",
+      "note": "print the glitch; the joke sustains rhythm"
+    },
+    "ORACLE": {
+      "function": "stretch time to expose will",
+      "setup": "duplicate drums, high-pass at 10 kHz for shimmer",
+      "action": "time-stretch another copy so one hit lasts a bar",
+      "prompt": "Which version prays slower?",
+      "note": "texture is theology in rhythm"
+    },
+    "CUSTODIAN": {
+      "function": "protect integrity through restraint",
+      "setup": "trim all regions to zero crossings before render",
+      "action": "duplicate session as *before_polarity* and archive untouched",
+      "prompt": "Does preservation permit transformation?",
+      "note": "clean cuts are acts of faith"
+    },
+    "ENGINEER": {
+      "function": "harness misalignment for depth",
+      "setup": "group drums, randomise each delay compensation Â±2 samples",
+      "action": "modulate bus limiter look-ahead with a triplet LFO",
+      "prompt": "Can precision swing?",
+      "note": "microscopic drift fattens reality"
+    },
+    "TRANSLATOR": {
+      "function": "let meaning arise from reversal",
+      "setup": "print drums, reverse, process, then flip again",
+      "action": "pan hard left/right, process only one side",
+      "prompt": "What survives translation through mirror?",
+      "note": "asymmetry asks the better questions"
+    },
+    "PILGRIM": {
+      "function": "find endurance in imperceptible change",
+      "setup": "automate drum bus down 0.5 dB every eight bars",
+      "action": "loop a single bar for five minutes doing nothing",
+      "prompt": "When does movement stop needing witness?",
+      "note": "if the loop becomes landscape, you’ve arrived"
+    },
+    "SEER": {
+      "function": "perceive structure through disorder",
+      "setup": "randomise stem playback order in new session",
+      "action": "open spectrogram of result without sound",
+      "prompt": "Where does energy congregate?",
+      "note": "the shape you see is where the song always spoke from"
+    },
+    "CARETAKER": {
+      "function": "embed patience into time’s body",
+      "setup": "create a bus called *restraint*, send everything at â€“30 dB",
+      "action": "automate master volume down 1 dB per minute",
+      "prompt": "How does devotion fade?",
+      "note": "stop when silence arrives unnoticed"
+    },
+    "CARTOGRAPHER": {
+      "function": "draw geography through imbalance",
+      "setup": "apply panorama automation shaped like a sine wave to hi-hats",
+      "action": "collapse to mono, widen only the snare",
+      "prompt": "Can wrongness orient?",
+      "note": "the map is legible through mistake"
+    },
+    "GHOST": {
+      "function": "trace vanishing as event",
+      "setup": "solo reverb return, bounce dry, invert phase, blend at 10%",
+      "action": "normalise the drum stem, fade to silence",
+      "prompt": "What breathes when presence dies?",
+      "note": "loop the last 0.2 seconds â€” extinction humming its own name"
+    }
+  },
+  "XVI": {
+    "ARCHIVIST": {
+      "function": "record gravity as data",
+      "setup": "low-cut everything above 120 Hz, solo the subs",
+      "action": "loop eight bars and take notes like fieldwork â€” shifting textures, weight migration, air thickness",
+      "prompt": "What story does gravity tell?",
+      "note": "every pressure change is history measured in sound"
+    },
+    "MIRROR": {
+      "function": "perceive empathy through vibration",
+      "setup": "duplicate the sub and distort one copy until it hisses",
+      "action": "blend until overtones breathe like exhalation",
+      "prompt": "Can distortion comfort?",
+      "note": "the bass learns compassion when it hums back"
+    },
+    "THERAPIST": {
+      "function": "soothe fatigue by quiet balance",
+      "setup": "pull the master volume down until lows barely register",
+      "action": "work ten minutes at that level",
+      "prompt": "Where does relief reside?",
+      "note": "when restored to full gain, mix toward the frequency that feels like rest"
+    },
+    "TRICKSTER": {
+      "function": "make imperfection groove",
+      "setup": "shift bass MIDI one tick late; render, then realign by hand",
+      "action": "keep the errors",
+      "prompt": "How much regret equals swing?",
+      "note": "groove is cumulative forgiveness"
+    },
+    "ORACLE": {
+      "function": "translate tone into pulse",
+      "setup": "automate pitch of one pure sine Â±2 cents",
+      "action": "listen for beating between tones",
+      "prompt": "Where does tone become event?",
+      "note": "mark the crossing â€” the body recognises before the ear"
+    },
+    "CUSTODIAN": {
+      "function": "tend to continuity",
+      "setup": "print all bass passes with date, temperature, moon phase",
+      "action": "log them sequentially in *bass_lineage*",
+      "prompt": "Does time change tone?",
+      "note": "order is a kind of hearing"
+    },
+    "ENGINEER": {
+      "function": "quantify chaos",
+      "setup": "insert a linear-phase EQ; automate phase mode on/off every eight bars",
+      "action": "observe rhythm emerging from drift",
+      "prompt": "Can interference keep time?",
+      "note": "data becomes swing when delay becomes faith"
+    },
+    "TRANSLATOR": {
+      "function": "render opposition as harmony",
+      "setup": "duplicate bass to two channels, one pitched up, one down a semitone",
+      "action": "pan opposite and fade between them",
+      "prompt": "How does meaning shift underfoot?",
+      "note": "uncertainty is movement disguised as tone"
+    },
+    "PILGRIM": {
+      "function": "hold ground through resonance",
+      "setup": "sustain one bass note for the track’s length",
+      "action": "layer all motion above it",
+      "prompt": "Can stillness walk?",
+      "note": "endurance hums lower than motion"
+    },
+    "SEER": {
+      "function": "interpret hierarchy through exposure",
+      "setup": "play all bass layers dry in another DAW",
+      "action": "note which elements still define form",
+      "prompt": "What architecture hides beneath colour?",
+      "note": "structure appears when illusion lifts"
+    },
+    "CARETAKER": {
+      "function": "perform maintenance through compassion",
+      "setup": "set a limiter on the sub bus but keep bypassed",
+      "action": "watch its meter while working",
+      "prompt": "Does observation alone calm chaos?",
+      "note": "the track settles under a gaze of care"
+    },
+    "CARTOGRAPHER": {
+      "function": "map gravity through motion",
+      "setup": "automate panning Â±3% below 200 Hz",
+      "action": "trace drift until it feels tidal",
+      "prompt": "Where does depth become direction?",
+      "note": "the ocean of sound has coastline"
+    },
+    "GHOST": {
+      "function": "frame absence as rhythm",
+      "setup": "render the low bus, invert phase, and mix at â€“20 dB",
+      "action": "bounce the master, EQ an extreme low-shelf cut, solo what’s missing",
+      "prompt": "Can emptiness move?",
+      "note": "the negative of bass is prayer in air pressure"
+    }
+  },
+  "XVII": {
+    "ARCHIVIST": {
+      "function": "classify weight as sensation",
+      "setup": "print the sub as mono",
+      "action": "cut out every transient, label clips â€œmetal,â€ â€œskin,â€ â€œbreath,â€ â€œsoft.â€",
+      "prompt": "What category trembles?",
+      "note": "taxonomy becomes autobiography when pressure names itself"
+    },
+    "MIRROR": {
+      "function": "measure forgetting as diffusion",
+      "setup": "duplicate the bass bus, apply extreme FFT blur",
+      "action": "blend quietly at 10%",
+      "prompt": "Which frequencies refuse to blur?",
+      "note": "empathy is resolution surrendered"
+    },
+    "THERAPIST": {
+      "function": "regulate emotion through EQ tilt",
+      "setup": "solo lows, sweep tilt until body tension subsides",
+      "action": "mark that curve and leave it",
+      "prompt": "Where does comfort hide?",
+      "note": "balance is care shaped like tone"
+    },
+    "TRICKSTER": {
+      "function": "destabilise groove through collage",
+      "setup": "slice bass into syllables, randomise order once, then by instinct",
+      "action": "loop irregularly",
+      "prompt": "Does chaos ever keep time?",
+      "note": "rhythm survives disorder by charm, not logic"
+    },
+    "ORACLE": {
+      "function": "grant autonomy to resonance",
+      "setup": "bounce a single low note and stretch until attack disappears",
+      "action": "normalise; let the drone speak alone",
+      "prompt": "What if tone prays for you?",
+      "note": "everything else is commentary orbiting gravity"
+    },
+    "CUSTODIAN": {
+      "function": "preserve low-end identity",
+      "setup": "open a spectrum analyser, write down every peak above â€“40 dB",
+      "action": "save as text beside session",
+      "prompt": "Can data remember soul?",
+      "note": "this list is the bass’s birth certificate"
+    },
+    "ENGINEER": {
+      "function": "document instability as beauty",
+      "setup": "apply unsynced Â±3 cent pitch modulation",
+      "action": "record five minutes",
+      "prompt": "Is drift design?",
+      "note": "chaos disguised as tuning drift becomes trance"
+    },
+    "TRANSLATOR": {
+      "function": "render presence through absence",
+      "setup": "transpose bass two octaves up; mute fundamental",
+      "action": "play until the ear imagines the missing note",
+      "prompt": "Can the unheard still lead?",
+      "note": "translation is faith in phantom fundamentals"
+    },
+    "PILGRIM": {
+      "function": "witness transformation through repetition",
+      "setup": "hold one bass note unprocessed for 60 seconds",
+      "action": "each day for a week, add one new process",
+      "prompt": "How does patience distort?",
+      "note": "compare day one and day eight â€” journey audible"
+    },
+    "SEER": {
+      "function": "read the whole from the ground",
+      "setup": "isolate bass; remove all else",
+      "action": "play and infer what remains implied",
+      "prompt": "Does foundation predict structure?",
+      "note": "if absence hums arrangement, the song is complete"
+    },
+    "CARETAKER": {
+      "function": "tend to endurance without exhaustion",
+      "setup": "automate 1 dB fade every 32 bars",
+      "action": "monitor listener fatigue",
+      "prompt": "Can care lower volume?",
+      "note": "stewardship whispers where leadership would shout"
+    },
+    "CARTOGRAPHER": {
+      "function": "find landmarks within frequency terrain",
+      "setup": "sweep a narrow bell through the sub until space moves",
+      "action": "mark that frequency",
+      "prompt": "Where does gravity pivot?",
+      "note": "rhythm builds around that coordinate"
+    },
+    "GHOST": {
+      "function": "compose with absence",
+      "setup": "duplicate the sub, mute the original, export silence",
+      "action": "layer the null file beneath mix at unity gain",
+      "prompt": "What tone do zeros hum?",
+      "note": "even silence contains your fingerprint in its noise floor"
     }
   }
 }
