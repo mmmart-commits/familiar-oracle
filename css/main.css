@@ -329,6 +329,13 @@ textarea {
     left: 0;
 }
 
+.tarot-icon {
+    width: 48px;  /* or whatever size */
+    height: 48px;
+    display: block;
+    margin: 0 auto var(--space-md);
+}
+
 /* ============================================
    TAROT CARDS
    ============================================ */
