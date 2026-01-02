@@ -124,7 +124,7 @@ function proceedToDraw() {
     const coordinates = document.getElementById('coordinates').value.trim();
     
     if (!matter) {
-        alert('please describe what the matter is today.');
+        alert('Please describe what the matter is today.');
         return;
     }
     
@@ -172,12 +172,12 @@ function flipCard(index) {
     
     // Show card face after flip animation
     setTimeout(() => {
-    const cardImage = TAROT.getCardImage(card);
-    cardEl.innerHTML = `
-        <img src="${cardImage}" alt="${card.name_en}" class="card-image">
-    `;
-}, 150);
-
+        const reversedLabel = card.reversed ? ' (R)' : '';
+        cardEl.innerHTML = `
+            <div class="card-number">${String(card.position).padStart(2, '0')}</div>
+            <div class="card-name">${card.name_en}${reversedLabel}</div>
+        `;
+    }, 150);
     
     // Check if all cards revealed
     const allRevealed = session.draw.every(c => c.revealed);
@@ -217,13 +217,12 @@ function proceedToOracle() {
     renderOracle();
 }
 
-function selectCycle(cycleId) {
-    console.log('Cycle ID received:', cycleId, 'Type:', typeof cycleId);
+async function selectCycle(cycleId) {
     const session = AppState.currentSession;
     session.cycle = cycleId;
     
-    // Get ritual
-    session.ritual = Oracle.getRitual(cycleId, session.familiar);
+    // Get ritual (await the async function)
+    session.ritual = await Oracle.getRitual(cycleId, session.familiar);
     
     // Update UI
     document.querySelectorAll('.cycle-option').forEach(el => {
@@ -270,8 +269,8 @@ function renderDrawButton() {
     const drawDisplay = document.getElementById('draw-display');
     drawDisplay.innerHTML = `
         <p class="field-help" style="text-align: center; margin: var(--space-lg) 0;">
-            press the button below to draw seven cards from the tarot de marseille.
-            <br>each card will map to one alchemical operation.
+            Press the button below to draw seven cards from the Tarot de Marseille.
+            <br>Each card will map to one alchemical operation.
         </p>
     `;
 }
@@ -288,17 +287,19 @@ function renderCardBacks(cards) {
             <div class="tarot-card card-back ${reversedClass}" 
                  data-card-index="${index}"
                  onclick="flipCard(${index})">
-                <img src="assets/cardback.jpg" alt="Card back" class="card-image">
+                <div class="card-back-design">
+                    <div class="card-number">${String(card.position).padStart(2, '0')}</div>
+                    <div class="card-back-symbol">✶</div>
+                </div>
             </div>
         `;
     });
     
     html += '</div>';
-    html += '<p class="field-help" style="text-align: center; margin-top: var(--space-md);">click each card to reveal</p>';
+    html += '<p class="field-help" style="text-align: center; margin-top: var(--space-md);">Click each card to reveal</p>';
     
     drawDisplay.innerHTML = html;
 }
-
 
 function renderCards(cards) {
     const drawDisplay = document.getElementById('draw-display');
@@ -450,8 +451,8 @@ function renderArchive() {
     
     if (sessions.length === 0) {
         const message = AppState.sessions.length === 0 ? 
-            'no sessions yet. begin a new session to start building your archive.' :
-            'no sessions match your filters.';
+            'No sessions yet. Begin a new session to start building your archive.' :
+            'No sessions match your filters.';
         archiveList.innerHTML = `<div class="archive-empty">${message}</div>`;
         return;
     }
@@ -560,9 +561,9 @@ function updateArchiveStats(showing, total) {
     if (!statsEl) return;
     
     if (showing === total) {
-        statsEl.innerHTML = `<p class="stats-text">showing all ${total} session${total !== 1 ? 's' : ''}</p>`;
+        statsEl.innerHTML = `<p class="stats-text">Showing all ${total} session${total !== 1 ? 's' : ''}</p>`;
     } else {
-        statsEl.innerHTML = `<p class="stats-text">showing ${showing} of ${total} session${total !== 1 ? 's' : ''}</p>`;
+        statsEl.innerHTML = `<p class="stats-text">Showing ${showing} of ${total} session${total !== 1 ? 's' : ''}</p>`;
     }
 }
 
@@ -577,7 +578,7 @@ function clearFilters() {
 }
 
 function deleteSession(sessionId) {
-    if (!confirm('delete this session? this cannot be undone...')) {
+    if (!confirm('Delete this session? This cannot be undone.')) {
         return;
     }
     
@@ -754,7 +755,7 @@ function saveSessions() {
         localStorage.setItem('oracle_sessions', JSON.stringify(AppState.sessions));
     } catch (e) {
         console.error('Error saving sessions:', e);
-        alert('error saving session. your browser storage may be full.');
+        alert('Error saving session. Your browser storage may be full.');
     }
 }
 
