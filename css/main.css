@@ -329,6 +329,13 @@ textarea {
     left: 0;
 }
 
+.tarot-icon {
+    width: 48px;  /* or whatever size */
+    height: 48px;
+    display: block;
+    margin: 0 auto var(--space-md);
+}
+
 /* ============================================
    TAROT CARDS
    ============================================ */
@@ -347,7 +354,7 @@ textarea {
     align-items: center;
     justify-content: center;
     padding: var(--space-sm);
-    background: var(--color-field-bg);
+    background: transparent;
     position: relative;
     cursor: pointer;
     transition: all 0.3s ease;
@@ -358,7 +365,7 @@ textarea {
 }
 
 .tarot-card.card-back {
-    background: var(--color-text);
+    background: transparent;
     color: var(--color-bg);
     border-color: var(--color-text);
 }

@@ -115,13 +115,10 @@ const TAROT = {
      * Get card image path
      */
     getCardImage(card) {
-        // Format: assets/tarot/01_magician.jpg (or .svg)
-        const id = String(card.id).padStart(2, '0');
-        const name = card.name_en.toLowerCase().replace(/\s+/g, '_');
-        
-        // Try SVG first, fall back to JPG, fall back to placeholder
-        return `assets/tarot/${id}_${name}.svg`;
-    }
+    // Images named a00.jpg (Fool) through a21.jpg (World)
+    const imageNumber = String(card.id).padStart(2, '0');
+    return `assets/a${imageNumber}.jpg`;
+}
 };
 
 // Export for use in other modules
