@@ -28,20 +28,20 @@ familiar-oracle/
 │   ├── oracle.js       # Oracle engine
 │   ├── tarot.js        # Tarot draw logic
 │   └── data.js         # All matrices and prompts
-├── assets/
-│   └── tarot/          # Card images (add yours here)
+├── assets/             # Card images (add yours here)
 └── README.md           # This file
 ```
 
 ## Adding Tarot Images
 
-Place your card images in `assets/tarot/` with this naming format:
+Place your card images in `assets/` with this naming format:
 ```
-00_fool.svg (or .jpg)
-01_magician.svg
-02_high_priestess.svg
+a00.jpg
+a01.jpg
+a02.jpg
 ...
-21_world.svg
+a21.jpg
+cardback.jpg
 ```
 
 The app will automatically use them if they exist, otherwise shows text placeholders.
@@ -139,9 +139,7 @@ Edit `css/main.css` → `:root` spacing variables:
 ## Known Limitations (Current Version)
 
 - ⚠️ I Ching not yet implemented (coming soon)
-- ⚠️ Archive entries not clickable/expandable yet
 - ⚠️ No import functionality (export only)
-- ⚠️ No Supabase sync (local storage only)
 - ⚠️ Placeholder data needs completion
 
 ## Philosophy
